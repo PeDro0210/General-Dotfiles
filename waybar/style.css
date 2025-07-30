@@ -1,0 +1,52 @@
+* {
+    border: none;
+    border-radius: 0;
+    min-height: 0;
+    font-family: "Pixel Code";
+    font-weight: bold;
+    font-size: 16px;
+    padding: 0;
+    background-color: transparent;
+}
+
+#clock {
+    margin: 6px 6px 6px 6px;
+    padding: 2px 8px;
+}
+
+#workspaces {
+    background-color: #272336;
+    margin: 6px 0px 6px 6px;
+    border-style: solid;
+    border-width: 1px;
+    border-image: linear-gradient(to bottom right, #FF74E0, #00F7FD) 1;
+}
+
+#workspaces button {
+    all: initial;
+    min-width: 0;
+    box-shadow: inset 0 -3px transparent;
+    padding: 2px 4px;
+    color: #6E828F;
+}
+
+#workspaces button.active {
+    all: initial;
+    min-width: 0;
+    box-shadow: inset 0 -3px transparent;
+    padding: 2px 4px;
+    color: #FFE200;
+    background-color: #3A385D
+}
+
+
+#clock {
+    background-color: #272336;
+    border-style: solid;
+    border-width: 1px;
+    border-image: linear-gradient(to bottom right, #FF74E0, #00F7FD) 1;
+    color: #6E828F;
+}
+
+
+

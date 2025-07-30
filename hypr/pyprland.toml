@@ -1,0 +1,9 @@
+[pyprland]
+
+plugins = ["scratchpads"]
+
+[scratchpads.term]
+animation = "fromTop"
+command = "wezterm start --class wez-dropterm"
+class = "wez-dropterm"
+size = "75% 60%"

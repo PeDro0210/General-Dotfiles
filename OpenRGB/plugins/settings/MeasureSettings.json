@@ -1,0 +1,44 @@
+[
+    {
+        "auto_start": false,
+        "brightness": 100,
+        "devices": [
+            {
+                "brightness": 100,
+                "description": "Razer Device, US (ANSI), Black",
+                "is_percentage_fill": true,
+                "is_segment": false,
+                "location": "HID: /dev/hidraw2",
+                "name": "Razer Huntsman Mini",
+                "reverse": false,
+                "segment_idx": -1,
+                "serial": "PM2047F45505372       ",
+                "vendor": "Razer",
+                "version": "v1.12",
+                "zone_idx": 0
+            }
+        ],
+        "fps": 60,
+        "hardware": 7,
+        "hardware_feature": 0,
+        "measure_color": {
+            "color_stops": [
+                [
+                    0.0,
+                    16777045
+                ],
+                [
+                    50.0,
+                    65535
+                ],
+                [
+                    100.0,
+                    16755455
+                ]
+            ]
+        },
+        "name": "Cool Synthwave",
+        "refresh_interval": 100,
+        "running": true
+    }
+]

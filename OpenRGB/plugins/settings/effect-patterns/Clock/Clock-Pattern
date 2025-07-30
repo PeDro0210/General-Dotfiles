@@ -1,0 +1,19 @@
+{
+    "AllowOnlyFirst": false,
+    "Brightness": 100,
+    "CustomSettings": {
+        "clock_mode": 0
+    },
+    "EffectClassName": "Clock",
+    "FPS": 60,
+    "RandomColors": false,
+    "Slider2Val": 1,
+    "Speed": 1,
+    "Temperature": 0,
+    "Tint": 0,
+    "UserColors": [
+        16727528,
+        16776960,
+        65535
+    ]
+}

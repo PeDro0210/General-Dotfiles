@@ -1,0 +1,48 @@
+* {
+    background-image: none;
+}
+
+window {
+    background-color: rgba(25, 0, 46, 0.5);
+}
+
+button {
+    color: #FF74E0;
+    font-size: 16px;
+    background-color: #272336;
+    border-style: none;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 35%;
+    margin: 5px;
+    text-shadow: 0px 0px;
+    box-shadow: 0px 0px;
+}
+
+button:focus,
+button:active,
+button:hover {
+    border-style: solid;
+    border-color: #3A385D;
+    border-width: 2px;
+    outline-style: none;
+}
+
+#logout {
+    background-image: image(url("/home/pedro0210/.config/wlogout/logout.png"));
+}
+
+#suspend {
+    background-image: image(url("/home/pedro0210/.config/wlogout/suspend.png"));
+}
+
+#shutdown {
+    background-image: image(
+        url("/home/pedro0210/.config/wlogout/shutdown.png")
+    );
+}
+
+#reboot {
+    background-image: image(url("/home/pedro0210/.config/wlogout/reboot.png"));
+}
+
