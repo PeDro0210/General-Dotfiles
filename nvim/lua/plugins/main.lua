@@ -19,7 +19,6 @@ return {
   {
     -- Lsp
     require("plugins.lsp.general"),
-    require("plugins.lsp.mason"),
   },
   {
     require("plugins.db-related.dadbod"),

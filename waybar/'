@@ -17,8 +17,7 @@
     "disable-scroll": true,
     "all-outputs": false,
     "persistent-workspaces":{
-       "DP-5":[2,4,6,8,10],
-       "DP-4":[1,3,5,7,9],
+       "DP-4":[2,4,6,8,10],
     }
   },
   "tray": {

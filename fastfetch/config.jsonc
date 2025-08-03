@@ -30,12 +30,6 @@
       "keyColor": "34",
     },
     {
-      "type": "packages",
-      "format": "{} (nxpkgs)",
-      "key": "PKG ",
-      "keyColor": "33",
-    },
-    {
       "type": "shell",
       "key": "SH  ",
       "keyColor": "34",
