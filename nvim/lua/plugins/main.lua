@@ -24,6 +24,9 @@ return {
 		-- The only thing that I hate about lazy
 		require("plugins.disable"),
 	},
+	{
+		require("plugins.which_key.general"),
+	},
 
 	--General Configs
 	{

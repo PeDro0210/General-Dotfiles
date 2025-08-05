@@ -1,6 +1,8 @@
 return {
 
 	vim.lsp.enable("lua_ls"),
+
+	-- all for nix related
 	{
 		"neovim/nvim-lspconfig",
 		name = "lspconfig.nil_ls",
@@ -30,4 +32,14 @@ return {
 			},
 		},
 	},
+	{
+		"neovim/nvim-lspconfig",
+		name = "lspconfig.clangd",
+		ft = { "c", "cpp" },
+		opts = {},
+		config = function(_, opts)
+			require("lspconfig").clangd.setup(opts)
+		end,
+	},
+	vim.lsp.enable("clangd"),
 }
