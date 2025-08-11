@@ -1,21 +1,20 @@
 * {
+
   font:   "Pixel Code Regular 11";
 
-  bg0     : #1a1b26;
-  bg1     : #1f2335;
-  bg2     : #24283b;
-  bg3     : #414868;
-  fg0     : #c0caf5;
-  fg1     : #a9b1d6;
-  fg2     : #737aa2;
-  red     : #f7768e;
+  bg     : #272336;
+  border : #3A385D;
+  fg0     : #6E828F;
+  fg1     : #00F7FD;
+  fg2     : #FF74E0;
+  red     : #FF74E0;
   green   : #9ece6a;
   yellow  : #e0af68;
   blue    : #7aa2f7;
   magenta : #9a7ecc;
   cyan    : #4abaaf;
 
-  accent: @red;
+  accent: #3A385D;
   urgent: @yellow;
 
   background-color : transparent;
@@ -30,41 +29,46 @@ element-icon, element-text, scrollbar {
   cursor: pointer;
 }
 
+mainbox{
+  background-color: @bg;
+}
+
 window {
   location : north;
   anchor   : north;
   width    : 512px;
 
-  background-color: @bg1;
-  border: 1px;
-  border-color: @bg3;
+  background-color: @bg;
+  border: 3px;
+  //This one is for doing the effects I do with the pink and the skyblue
+  background-image: linear-gradient(to right,#FF74E0,#00F7FD);
 }
 
 inputbar {
   spacing  : 8px;
   padding  : 4px 8px;
-  children : [ icon-search, entry ];
+  children : [ entry ];
 
-  background-color: @bg0;
+  border: 0px 0px 1px 0px;
+  border-color: @border;
+  background-color: @bg;
 }
+
+
+
 
 icon-search, entry, element-icon, element-text {
-  vertical-align: 0.5;
+  text-color: @fg1;
 }
 
-icon-search {
-  expand   : false;
-  filename : "search-symbolic";
-  size     : 14px;
-}
 
 textbox {
   padding          : 4px 8px;
-  background-color : @bg2;
+  background-color : @bg;
 }
 
 listview {
-  padding      : 4px 0px;
+  padding      : 0px 0px;
   lines        : 12;
   columns      : 1;
   fixed-height : false;
@@ -89,7 +93,7 @@ element alternate active {
 }
 
 element selected {
-  text-color       : @bg1;
+  text-color       : @fg2;
   background-color : @accent;
 }
 
