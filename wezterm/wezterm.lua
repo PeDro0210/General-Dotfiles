@@ -22,6 +22,10 @@ return {
 	inactive_pane_hsb = {
 		brightness = 0.7,
 	},
+	set_environment_variables = {
+		TERMINFO_DIRS = "/home/pedro0210/.nix-profile/share/terminfo",
+		WSLENV = "TERMINFO_DIRS",
+	},
 	window_close_confirmation = "NeverPrompt",
 	default_prog = { "fish" },
 	front_end = "OpenGL",

@@ -1,0 +1,55 @@
+[log] [2025-08-12T20:09:02.202Z] Howdy from platform_worker!
+[log] [2025-08-12T20:09:02.438Z] globalPaths extended with /nix/store/8xqnrnw9n1kpk5jip556zn0rh6q7j0ah-beeper-4.0.661-extracted/resources/app/node_modules
+[debug] [2025-08-12T20:09:02.438Z] Time: Worker: load platform info — bridge-hungryserv — 0
+[debug] [2025-08-12T20:09:02.439Z] Time: Worker: load platform info — bridge-generic — 0
+[debug] [2025-08-12T20:09:02.439Z] Time: Worker: load platform info — bridge-whatsapp — 0
+[debug] [2025-08-12T20:09:02.439Z] Time: Worker: load platform info — bridge-twitter — 0
+[debug] [2025-08-12T20:09:02.439Z] Time: Worker: load platform info — bridge-telegram — 0
+[debug] [2025-08-12T20:09:02.439Z] Time: Worker: load platform info — bridge-slackgo — 0
+[debug] [2025-08-12T20:09:02.439Z] Time: Worker: load platform info — bridge-discordgo — 0
+[debug] [2025-08-12T20:09:02.439Z] Time: Worker: load platform info — bridge-facebookgo — 0
+[debug] [2025-08-12T20:09:02.439Z] Time: Worker: load platform info — bridge-instagramgo — 0
+[debug] [2025-08-12T20:09:02.439Z] Time: Worker: load platform info — bridge-linkedin — 0
+[debug] [2025-08-12T20:09:02.439Z] Time: Worker: load platform info — bridge-imessagecloud — 0
+[debug] [2025-08-12T20:09:02.439Z] Time: Worker: load platform info — bridge-gmessages — 0
+[debug] [2025-08-12T20:09:02.439Z] Time: Worker: load platform info — bridge-signal — 0
+[debug] [2025-08-12T20:09:02.439Z] Time: Worker: load platform info — bridge-local-signal — 0
+[debug] [2025-08-12T20:09:02.439Z] Time: Worker: load platform info — bridge-local-instagram — 0
+[debug] [2025-08-12T20:09:02.439Z] Time: Worker: load platform info — bridge-local-facebook — 0
+[debug] [2025-08-12T20:09:02.439Z] Time: Worker: load platform info — bridge-local-whatsapp — 0
+[debug] [2025-08-12T20:09:02.439Z] Time: Worker: load platform info — bridge-local-telegram — 0
+[debug] [2025-08-12T20:09:02.439Z] Time: Worker: load platform info — bridge-local-twitter — 0
+[debug] [2025-08-12T20:09:02.439Z] Time: Worker: load platform info — bridge-local-linkedin — 0
+[info] [2025-08-12T20:09:02.439Z] skipped sending events to legacy /metrics endpoint [{"type":"timing","eventData":{"category":"Worker: load platform info","value":"bridge-hungryserv","time":"0"},"metadata":{"os":{"name":"linux","version":"6.12.41"},"appVersion":"4.0.661","arch":"x64","isWKWV":false}},{"type":"timing","eventData":{"category":"Worker: load platform info","value":"bridge-generic","time":"0"},"metadata":{"os":{"name":"linux","version":"6.12.41"},"appVersion":"4.0.661","arch":"x64","isWKWV":false}},{"type":"timing","eventData":{"category":"Worker: load platform info","value":"bridge-whatsapp","time":"0"},"metadata":{"os":{"name":"linux","version":"6.12.41"},"appVersion":"4.0.661","arch":"x64","isWKWV":false}},{"type":"timing","eventData":{"category":"Worker: load platform info","value":"bridge-twitter","time":"0"},"metadata":{"os":{"name":"linux","version":"6.12.41"},"appVersion":"4.0.661","arch":"x64","isWKWV":false}},{"type":"timing","eventData":{"category":"Worker: load platform info","value":"bridge-telegram","time":"0"},"metadata":{"os":{"name":"linux","version":"6.12.41"},"appVersion":"4.0.661","arch":"x64","isWKWV":false}},{"type":"timing","eventData":{"category":"Worker: load platform info","value":"bridge-slackgo","time":"0"},"metadata":{"os":{"name":"linux","version":"6.12.41"},"appVersion":"4.0.661","arch":"x64","isWKWV":false}},{"type":"timing","eventData":{"category":"Worker: load platform info","value":"bridge-discordgo","time":"0"},"metadata":{"os":{"name":"linux","version":"6.12.41"},"appVersion":"4.0.661","arch":"x64","isWKWV":false}},{"type":"timing","eventData":{"category":"Worker: load platform info","value":"bridge-facebookgo","time":"0"},"metadata":{"os":{"name":"linux","version":"6.12.41"},"appVersion":"4.0.661","arch":"x64","isWKWV":false}},{"type":"timing","eventData":{"category":"Worker: load platform info","value":"bridge-instagramgo","time":"0"},"metadata":{"os":{"name":"linux","version":"6.12.41"},"appVersion":"4.0.661","arch":"x64","isWKWV":false}},{"type":"timing","eventData":{"category":"Worker: load platform info","value":"bridge-linkedin","time":"0"},"metadata":{"os":{"name":"linux","version":"6.12.41"},"appVersion":"4.0.661","arch":"x64","isWKWV":false}},{"type":"timing","eventData":{"category":"Worker: load platform info","value":"bridge-imessagecloud","time":"0"},"metadata":{"os":{"name":"linux","version":"6.12.41"},"appVersion":"4.0.661","arch":"x64","isWKWV":false}},{"type":"timing","eventData":{"category":"Worker: load platform info","value":"bridge-gmessages","time":"0"},"metadata":{"os":{"name":"linux","version":"6.12.41"},"appVersion":"4.0.661","arch":"x64","isWKWV":false}},{"type":"timing","eventData":{"category":"Worker: load platform info","value":"bridge-signal","time":"0"},"metadata":{"os":{"name":"linux","version":"6.12.41"},"appVersion":"4.0.661","arch":"x64","isWKWV":false}},{"type":"timing","eventData":{"category":"Worker: load platform info","value":"bridge-local-signal","time":"0"},"metadata":{"os":{"name":"linux","version":"6.12.41"},"appVersion":"4.0.661","arch":"x64","isWKWV":false}},{"type":"timing","eventData":{"category":"Worker: load platform info","value":"bridge-local-instagram","time":"0"},"metadata":{"os":{"name":"linux","version":"6.12.41"},"appVersion":"4.0.661","arch":"x64","isWKWV":false}},{"type":"timing","eventData":{"category":"Worker: load platform info","value":"bridge-local-facebook","time":"0"},"metadata":{"os":{"name":"linux","version":"6.12.41"},"appVersion":"4.0.661","arch":"x64","isWKWV":false}},{"type":"timing","eventData":{"category":"Worker: load platform info","value":"bridge-local-whatsapp","time":"0"},"metadata":{"os":{"name":"linux","version":"6.12.41"},"appVersion":"4.0.661","arch":"x64","isWKWV":false}},{"type":"timing","eventData":{"category":"Worker: load platform info","value":"bridge-local-telegram","time":"0"},"metadata":{"os":{"name":"linux","version":"6.12.41"},"appVersion":"4.0.661","arch":"x64","isWKWV":false}},{"type":"timing","eventData":{"category":"Worker: load platform info","value":"bridge-local-twitter","time":"0"},"metadata":{"os":{"name":"linux","version":"6.12.41"},"appVersion":"4.0.661","arch":"x64","isWKWV":false}},{"type":"timing","eventData":{"category":"Worker: load platform info","value":"bridge-local-linkedin","time":"0"},"metadata":{"os":{"name":"linux","version":"6.12.41"},"appVersion":"4.0.661","arch":"x64","isWKWV":false}}]
+[debug] [2025-08-12T20:09:02.441Z] Time: Worker: load platform info — bridge-local-bluesky — 0
+[debug] [2025-08-12T20:09:02.441Z] Time: Worker: load platform info — bridge-googlechat — 0
+[log] [2025-08-12T20:09:02.441Z] Total platform info load time: 0 ms
+[log] [2025-08-12T20:09:02.441Z] sqlite_worker starting worker
+[log] [2025-08-12T20:09:02.443Z] updating app manifest from https://api.beeper.com
+[log] [2025-08-12T20:09:02.468Z] reading app manifest from /home/pedro0210/.config/BeeperTexts/app-manifest-production.json
+[error] [2025-08-12T20:09:02.469Z] failed to read app manifest from /home/pedro0210/.config/BeeperTexts/app-manifest-production.json
+[log] [2025-08-12T20:09:02.469Z] updating app manifest from https://api.beeper.com
+[log] [2025-08-12T20:09:02.480Z] sqlite_worker took 39 ms to be online
+[debug] [2025-08-12T20:09:02.628Z] removed leaky platform-imessage.log
+[log] [2025-08-12T20:09:02.629Z] [DESK-4700 migration] found 0 group threads with exited members
+[log] [2025-08-12T20:09:02.973Z] recomputing and syncing accounts - change detected, updating the DB
+[log] [2025-08-12T20:09:02.974Z] HttpServer.create
+[log] [2025-08-12T20:09:02.975Z] WSS.create
+[log] [2025-08-12T20:09:02.976Z] HttpServer.listening
+[debug] [2025-08-12T20:09:02.976Z] Time: PAS — Init time — 535
+[error] [2025-08-12T20:09:03.672Z] errored while servicing objproxy call (to fsp.stat, 1 args), propagating: {"errno":"number:-2","code":"string:string[6]","syscall":"string:string[4]","path":"string:string[46]"}
+[debug] [2025-08-12T20:09:03.673Z] Time: PAS: load platform api — bridge-hungryserv — 0
+[log] [2025-08-12T20:09:03.673Z] BridgedPlatformAPI [INIT] platformName: bridge-hungryserv, bridgeID: hungryserv, bridgeType: hungryserv, bridgeProvider: cloud, remoteID: hungryserv
+[debug] [2025-08-12T20:09:03.673Z] startBridgeIfNotRunning called for bridge hungryserv
+[debug] [2025-08-12T20:09:03.674Z] skipping start for bridge hungryserv
+[log] [2025-08-12T20:09:03.833Z] disposing existing hungryserv bridge-hungryserv
+[log] [2025-08-12T20:09:03.833Z] BridgedPlatformAPI [INIT] platformName: bridge-hungryserv, bridgeID: hungryserv, bridgeType: hungryserv, bridgeProvider: cloud, remoteID: hungryserv
+[debug] [2025-08-12T20:09:03.833Z] startBridgeIfNotRunning called for bridge hungryserv
+[debug] [2025-08-12T20:09:03.833Z] skipping start for bridge hungryserv
+[info] [2025-08-12T20:09:06.171Z] skipped sending events to legacy /metrics endpoint [{"type":"timing","eventData":{"category":"Worker: load platform info","value":"bridge-local-bluesky","time":"0"},"metadata":{"os":{"name":"linux","version":"6.12.41"},"appVersion":"4.0.661","arch":"x64","isWKWV":false}},{"type":"timing","eventData":{"category":"Worker: load platform info","value":"bridge-googlechat","time":"0"},"metadata":{"os":{"name":"linux","version":"6.12.41"},"appVersion":"4.0.661","arch":"x64","isWKWV":false}},{"type":"timing","eventData":{"category":"PAS","value":"Init time","time":"535"},"metadata":{"os":{"name":"linux","version":"6.12.41"},"appVersion":"4.0.661","arch":"x64","isWKWV":false}},{"type":"timing","eventData":{"category":"PAS: load platform api","value":"bridge-hungryserv","time":"0"},"metadata":{"os":{"name":"linux","version":"6.12.41"},"appVersion":"4.0.661","arch":"x64","isWKWV":false}}]
+[log] [2025-08-12T20:09:06.172Z] HttpServer.dispose
+[log] [2025-08-12T20:09:06.172Z] WSS.dispose
+[log] [2025-08-12T20:09:06.172Z] HttpServer.close
+[log] [2025-08-12T20:09:06.172Z] WSS.close
+[log] [2025-08-12T20:09:06.173Z] disposing BeeperClient
+[error] [2025-08-12T20:09:06.185Z] sqlite_worker worker exit event 1

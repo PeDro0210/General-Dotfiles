@@ -1,0 +1,73 @@
+[log] [2025-08-12T20:09:02.972Z] recomputing accounts - start, triggered by: init
+[log] [2025-08-12T20:09:02.973Z] recomputing accounts - end, previous account count: 0, new account count: 1, computed account IDs: hungryserv, was triggered by: init
+[log] [2025-08-12T20:09:02.973Z] recomputing spaces from rooms - start, triggered by: init
+[debug] [2025-08-12T20:09:02.973Z] recomputing spaces from rooms - no change, triggered by: init
+[log] [2025-08-12T20:09:02.976Z] [SDK] {"level":"info","dataDir":"/home/pedro0210/.config/BeeperTexts","appType":"desktop","appName":"Beeper Desktop v4 (Linux)","appVersion":"4.0.661","deviceModel":"Linux PC","deviceType":"computer","time":"2025-08-12T14:09:02.974174318-06:00","message":"BeeperSDK configured"}
+[log] [2025-08-12T20:09:02.976Z] [SDK] {"level":"debug","time":"2025-08-12T14:09:02.97463723-06:00","message":"beeperSDK::Start()"}
+[log] [2025-08-12T20:09:02.976Z] [SDK] {"level":"info","path":"/home/pedro0210/.config/BeeperTexts/account.db","time":"2025-08-12T14:09:02.974733834-06:00","message":"Initializing database"}
+[log] [2025-08-12T20:09:02.999Z] [SDK] {"level":"info","component":"database","current_version":0,"oldest_compatible_version":0,"latest_known_version":30,"time":"2025-08-12T14:09:02.999614502-06:00","message":"Preparing to update database schema"}
+[log] [2025-08-12T20:09:02.999Z] [SDK] {"level":"info","component":"database","from":0,"to":30,"txn_mode":"on","description":"Latest schema","time":"2025-08-12T14:09:02.999630463-06:00","message":"Upgrading database"}
+[log] [2025-08-12T20:09:03.001Z] [SDK] {"level":"debug","time":"2025-08-12T14:09:03.001049415-06:00","message":"Create MatrixClient"}
+[log] [2025-08-12T20:09:03.001Z] [SDK] {"level":"info","component":"matrix","time":"2025-08-12T14:09:03.001096654-06:00","message":"No user account in database"}
+[log] [2025-08-12T20:09:03.001Z] [SDK] {"level":"info","component":"database","current_version":0,"oldest_compatible_version":0,"latest_known_version":7,"time":"2025-08-12T14:09:03.00120997-06:00","message":"Preparing to update database schema"}
+[log] [2025-08-12T20:09:03.001Z] [SDK] {"level":"info","component":"database","from":0,"to":7,"txn_mode":"on","description":"Latest revision","time":"2025-08-12T14:09:03.001217685-06:00","message":"Upgrading database"}
+[log] [2025-08-12T20:09:03.001Z] [SDK] {"level":"info","component":"database","current_version":0,"oldest_compatible_version":0,"latest_known_version":17,"time":"2025-08-12T14:09:03.001784875-06:00","message":"Preparing to update database schema"}
+[log] [2025-08-12T20:09:03.001Z] [SDK] {"level":"info","component":"database","from":0,"to":17,"txn_mode":"on","description":"Latest revision","time":"2025-08-12T14:09:03.001791447-06:00","message":"Upgrading database"}
+[log] [2025-08-12T20:09:03.002Z] [SDK] {"level":"warn","component":"matrix","time":"2025-08-12T14:09:03.002840755-06:00","message":"Backup init failed, will retry on start"}
+[log] [2025-08-12T20:09:03.002Z] [SDK] {"level":"info","component":"matrix","time":"2025-08-12T14:09:03.002846065-06:00","message":"Created MatrixClient"}
+[log] [2025-08-12T20:09:03.002Z] [SDK] {"level":"debug","component":"matrix","time":"2025-08-12T14:09:03.002878687-06:00","message":"MatrixClient::Start()"}
+[log] [2025-08-12T20:09:03.003Z] [SDK] {"level":"debug","component":"matrix","time":"2025-08-12T14:09:03.002880621-06:00","message":"Initializing client state"}
+[log] [2025-08-12T20:09:03.003Z] [SDK] {"level":"debug","user_id":"","device_id":"","time":"2025-08-12T14:09:03.003532422-06:00","message":"Own device missing"}
+[log] [2025-08-12T20:09:03.003Z] [SDK] {"level":"debug","component":"matrix","state":{"user_id":"","device_id":"","homeserver":"","verified":false,"cross_signing":false,"secrets":{"master_key":false,"self_signing_key":false,"user_signing_key":false,"megolm_backup_key":false},"key_backup":false,"initialized":false,"first_sync_done":false},"time":"2025-08-12T14:09:03.003615581-06:00","message":"Loaded client state"}
+[log] [2025-08-12T20:09:03.004Z] [SDK] {"level":"debug","time":"2025-08-12T14:09:03.003774032-06:00","message":"Create LocalBridges"}
+[log] [2025-08-12T20:09:03.011Z] [SDK] {"level":"info","current_version":0,"oldest_compatible_version":0,"latest_known_version":1,"time":"2025-08-12T14:09:03.011504483-06:00","message":"Preparing to update database schema"}
+[log] [2025-08-12T20:09:03.011Z] [SDK] {"level":"info","from":0,"to":1,"txn_mode":"on","description":"Latest revision","time":"2025-08-12T14:09:03.011514852-06:00","message":"Upgrading database"}
+[log] [2025-08-12T20:09:03.011Z] [SDK] {"level":"info","component":"bridges","time":"2025-08-12T14:09:03.011749659-06:00","message":"Created LocalBridges"}
+[log] [2025-08-12T20:09:03.011Z] [SDK] {"level":"debug","component":"bridges","bridge":"local-twitter","time":"2025-08-12T14:09:03.011823841-06:00","message":"Not starting bridge with no states"}
+[log] [2025-08-12T20:09:03.011Z] [SDK] {"level":"debug","component":"bridges","bridge":"local-linkedin","time":"2025-08-12T14:09:03.011838378-06:00","message":"Not starting bridge with no states"}
+[log] [2025-08-12T20:09:03.011Z] [SDK] {"level":"debug","component":"bridges","bridge":"local-signal","time":"2025-08-12T14:09:03.011872103-06:00","message":"Not starting bridge with no states"}
+[log] [2025-08-12T20:09:03.011Z] [SDK] {"level":"debug","component":"bridges","bridge":"local-whatsapp","time":"2025-08-12T14:09:03.011898493-06:00","message":"Not starting bridge with no states"}
+[log] [2025-08-12T20:09:03.011Z] [SDK] {"level":"debug","component":"bridges","bridge":"local-slack","time":"2025-08-12T14:09:03.011915395-06:00","message":"Not starting bridge with no states"}
+[log] [2025-08-12T20:09:03.012Z] [SDK] {"level":"debug","component":"bridges","bridge":"local-telegram","time":"2025-08-12T14:09:03.011934051-06:00","message":"Not starting bridge with no states"}
+[log] [2025-08-12T20:09:03.012Z] [SDK] {"level":"debug","component":"bridges","bridge":"local-facebook","time":"2025-08-12T14:09:03.011950301-06:00","message":"Not starting bridge with no states"}
+[log] [2025-08-12T20:09:03.012Z] [SDK] {"level":"debug","component":"bridges","bridge":"local-instagram","time":"2025-08-12T14:09:03.011968546-06:00","message":"Not starting bridge with no states"}
+[log] [2025-08-12T20:09:03.012Z] [SDK] {"level":"debug","component":"bridges","bridge":"local-gmessages","time":"2025-08-12T14:09:03.011980359-06:00","message":"Not starting bridge with no states"}
+[log] [2025-08-12T20:09:03.012Z] [SDK] {"level":"debug","time":"2025-08-12T14:09:03.011992913-06:00","message":"beeperSDK::startSDK()"}
+[log] [2025-08-12T20:09:03.012Z] [SDK] {"level":"debug","time":"2025-08-12T14:09:03.01199695-06:00","message":"beeperSDK::Start() done"}
+[log] [2025-08-12T20:09:03.012Z] [SDK] {"level":"debug","subcomponent":"pagination_loop","time":"2025-08-12T14:09:03.012015476-06:00","message":"Started"}
+[log] [2025-08-12T20:09:03.012Z] [SDK] {"level":"debug","component":"bridges","subcomponent":"local_states_loop","time":"2025-08-12T14:09:03.012010346-06:00","message":"Started"}
+[log] [2025-08-12T20:09:03.012Z] [SDK] {"level":"debug","subcomponent":"upgrades_loop","time":"2025-08-12T14:09:03.012045954-06:00","message":"Starting"}
+[log] [2025-08-12T20:09:03.012Z] [SDK] {"level":"info","subcomponent":"upgrades_loop","upgrade":"upgrade00FixMissingEncryptionEvents","time":"2025-08-12T14:09:03.012174819-06:00","message":"Running upgrade"}
+[log] [2025-08-12T20:09:03.012Z] [SDK] {"level":"info","subcomponent":"upgrades_loop","upgrade":"upgrade00FixMissingEncryptionEvents","time":"2025-08-12T14:09:03.012215086-06:00","message":"Upgrade complete"}
+[log] [2025-08-12T20:09:03.012Z] [SDK] {"level":"info","subcomponent":"upgrades_loop","upgrade":"upgrade01PopulateLocalBridgeStates","time":"2025-08-12T14:09:03.012234433-06:00","message":"Running upgrade"}
+[log] [2025-08-12T20:09:03.012Z] [SDK] {"level":"info","subcomponent":"upgrades_loop","upgrade":"upgrade01PopulateLocalBridgeStates","time":"2025-08-12T14:09:03.012253158-06:00","message":"Upgrade complete"}
+[log] [2025-08-12T20:09:03.012Z] [SDK] {"level":"info","subcomponent":"upgrades_loop","upgrade":"upgrade02DeleteLegacyMegabridges","time":"2025-08-12T14:09:03.012267315-06:00","message":"Running upgrade"}
+[log] [2025-08-12T20:09:03.012Z] [SDK] {"level":"info","subcomponent":"upgrades_loop","upgrade":"upgrade02DeleteLegacyMegabridges","time":"2025-08-12T14:09:03.012288736-06:00","message":"Upgrade complete"}
+[log] [2025-08-12T20:09:03.012Z] [SDK] {"level":"info","subcomponent":"upgrades_loop","upgrade":"upgrade03DeleteLegacyMegabridgesAgain","time":"2025-08-12T14:09:03.012299667-06:00","message":"Running upgrade"}
+[log] [2025-08-12T20:09:03.012Z] [SDK] {"level":"info","subcomponent":"upgrades_loop","upgrade":"upgrade03DeleteLegacyMegabridgesAgain","time":"2025-08-12T14:09:03.012314856-06:00","message":"Upgrade complete"}
+[log] [2025-08-12T20:09:03.012Z] [SDK] {"level":"info","subcomponent":"upgrades_loop","upgrade":"upgrade04DeleteAllLocalBridges","time":"2025-08-12T14:09:03.012326137-06:00","message":"Running upgrade"}
+[log] [2025-08-12T20:09:03.012Z] [SDK] {"level":"info","subcomponent":"upgrades_loop","upgrade":"upgrade04DeleteAllLocalBridges","time":"2025-08-12T14:09:03.012339192-06:00","message":"Upgrade complete"}
+[log] [2025-08-12T20:09:03.012Z] [SDK] {"level":"info","subcomponent":"upgrades_loop","upgrade":"upgrade05DeleteAllLocalBridgesAgain","time":"2025-08-12T14:09:03.01234851-06:00","message":"Running upgrade"}
+[log] [2025-08-12T20:09:03.012Z] [SDK] {"level":"info","subcomponent":"upgrades_loop","num_states":0,"states":null,"time":"2025-08-12T14:09:03.01242207-06:00","message":"Deleting all local bridges"}
+[log] [2025-08-12T20:09:03.012Z] [SDK] {"level":"info","subcomponent":"upgrades_loop","upgrade":"upgrade05DeleteAllLocalBridgesAgain","time":"2025-08-12T14:09:03.012442328-06:00","message":"Upgrade complete"}
+[log] [2025-08-12T20:09:03.012Z] [SDK] {"level":"info","subcomponent":"upgrades_loop","upgrade":"upgrade06ResyncLocalBridgeMembers","time":"2025-08-12T14:09:03.012457297-06:00","message":"Running upgrade"}
+[log] [2025-08-12T20:09:03.012Z] [SDK] {"level":"info","subcomponent":"upgrades_loop","num_states":0,"time":"2025-08-12T14:09:03.012473618-06:00","message":"Resyncing all local bridge room members"}
+[log] [2025-08-12T20:09:03.012Z] [SDK] {"level":"info","subcomponent":"upgrades_loop","upgrade":"upgrade06ResyncLocalBridgeMembers","time":"2025-08-12T14:09:03.012487925-06:00","message":"Upgrade complete"}
+[log] [2025-08-12T20:09:03.012Z] [SDK] {"level":"info","subcomponent":"upgrades_loop","upgrade":"upgrade07SendLocalRoomBackfillStateEvents","time":"2025-08-12T14:09:03.012498415-06:00","message":"Running upgrade"}
+[log] [2025-08-12T20:09:03.012Z] [SDK] {"level":"info","subcomponent":"upgrades_loop","num_states":0,"time":"2025-08-12T14:09:03.012512803-06:00","message":"Sending backfill state events to all local rooms"}
+[log] [2025-08-12T20:09:03.012Z] [SDK] {"level":"info","subcomponent":"upgrades_loop","upgrade":"upgrade07SendLocalRoomBackfillStateEvents","time":"2025-08-12T14:09:03.012527921-06:00","message":"Upgrade complete"}
+[log] [2025-08-12T20:09:03.012Z] [SDK] {"level":"info","subcomponent":"upgrades_loop","upgrade":"upgrade08LeaveLocalRoomsNoBackfillState","time":"2025-08-12T14:09:03.012551506-06:00","message":"Running upgrade"}
+[log] [2025-08-12T20:09:03.012Z] [SDK] {"level":"info","subcomponent":"upgrades_loop","upgrade":"upgrade08LeaveLocalRoomsNoBackfillState","time":"2025-08-12T14:09:03.012587495-06:00","message":"Upgrade complete"}
+[log] [2025-08-12T20:09:03.012Z] [SDK] {"level":"debug","subcomponent":"upgrades_loop","time":"2025-08-12T14:09:03.012588707-06:00","message":"Exited"}
+[log] [2025-08-12T20:09:03.012Z] [SDK] {"level":"info","component":"signalmeow","component":"libsignal","file":"rust/bridge/ffi/src/logging.rs","line":103,"time":"2025-08-12T14:09:03.012963952-06:00","message":"Initializing libsignal version:0.70.0"}
+[log] [2025-08-12T20:09:06.172Z] [SDK] {"level":"debug","time":"2025-08-12T14:09:06.172256357-06:00","message":"beeperSDK::Stop()"}
+[log] [2025-08-12T20:09:06.172Z] [SDK] {"level":"info","component":"matrix","time":"2025-08-12T14:09:06.172279451-06:00","message":"Stopping client"}
+[log] [2025-08-12T20:09:06.172Z] [SDK] {"level":"debug","component":"matrix","time":"2025-08-12T14:09:06.172286164-06:00","message":"Waiting for loops to terminate"}
+[log] [2025-08-12T20:09:06.172Z] [SDK] {"level":"debug","component":"matrix","time":"2025-08-12T14:09:06.1723048-06:00","message":"Waiting for client loops to complete"}
+[log] [2025-08-12T20:09:06.172Z] [SDK] {"level":"debug","component":"matrix","time":"2025-08-12T14:09:06.172308607-06:00","message":"Stopping room send queues"}
+[log] [2025-08-12T20:09:06.172Z] [SDK] {"level":"debug","component":"matrix","time":"2025-08-12T14:09:06.172312765-06:00","message":"Waiting for olm operations to complete"}
+[log] [2025-08-12T20:09:06.172Z] [SDK] {"level":"debug","component":"matrix","time":"2025-08-12T14:09:06.172313356-06:00","message":"Stopping backup"}
+[log] [2025-08-12T20:09:06.172Z] [SDK] {"level":"info","component":"matrix","time":"2025-08-12T14:09:06.172314448-06:00","message":"All loops exited"}
+[log] [2025-08-12T20:09:06.172Z] [SDK] {"level":"debug","component":"bridges","subcomponent":"local_states_loop","time":"2025-08-12T14:09:06.172325229-06:00","message":"Exited"}
+[log] [2025-08-12T20:09:06.172Z] [SDK] {"level":"debug","subcomponent":"pagination_loop","time":"2025-08-12T14:09:06.172334957-06:00","message":"Exited"}
+[log] [2025-08-12T20:09:06.172Z] [SDK] {"level":"debug","time":"2025-08-12T14:09:06.172337181-06:00","message":"beeperSDK::Stop() done"}

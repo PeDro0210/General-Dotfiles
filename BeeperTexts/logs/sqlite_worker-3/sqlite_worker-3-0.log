@@ -1,0 +1,327 @@
+[log] [2025-08-12T20:09:02.527Z] Howdy from sqlite_worker!
+[debug] [2025-08-12T20:09:02.599Z] PRAGMA user_version
+[debug] [2025-08-12T20:09:02.599Z] PRAGMA journal_mode = wal;
+[debug] [2025-08-12T20:09:02.615Z] CREATE TABLE IF NOT EXISTS 'threads' (
+    'threadID' VARCHAR NOT NULL PRIMARY KEY,
+    'accountID' VARCHAR,
+    'thread' JSON NOT NULL,
+    'timestamp' INTEGER DEFAULT 0
+  );
+[debug] [2025-08-12T20:09:02.619Z] CREATE INDEX IF NOT EXISTS idx_threads_account ON threads (accountID);
+[debug] [2025-08-12T20:09:02.619Z] CREATE TABLE IF NOT EXISTS 'messages' (
+    'messageID' VARCHAR NOT NULL,
+    'accountID' VARCHAR NOT NULL,
+    'timestamp' INTEGER NOT NULL,
+    'threadID' VARCHAR NOT NULL,
+    'message' JSON NOT NULL,
+    PRIMARY KEY (accountID, messageID)
+  );
+[debug] [2025-08-12T20:09:02.619Z] CREATE INDEX IF NOT EXISTS 'messages_message_text_idx' ON 'messages' (JSON_EXTRACT(message, '$.text') COLLATE NOCASE);
+[debug] [2025-08-12T20:09:02.619Z] CREATE TABLE IF NOT EXISTS 'users' (
+    'userID' VARCHAR NOT NULL,
+    'accountID' VARCHAR,
+    'user' JSON NOT NULL,
+    PRIMARY KEY (accountID, userID)
+  );
+[debug] [2025-08-12T20:09:02.619Z] CREATE UNIQUE INDEX IF NOT EXISTS idx_null_account_user ON users (userID)
+  WHERE accountID IS NULL;
+[debug] [2025-08-12T20:09:02.619Z] CREATE TABLE IF NOT EXISTS 'thread_props' (
+    'accountID' VARCHAR,
+    'threadID' VARCHAR NOT NULL,
+    'props' JSON NOT NULL,
+    PRIMARY KEY (accountID, threadID)
+  );
+[debug] [2025-08-12T20:09:02.619Z] CREATE UNIQUE INDEX IF NOT EXISTS idx_null_account_thread_props ON thread_props (threadID)
+  WHERE accountID IS NULL;
+[debug] [2025-08-12T20:09:02.619Z] CREATE TABLE IF NOT EXISTS 'key_values' (
+    'key' VARCHAR NOT NULL,
+    'value' JSON NOT NULL,
+    PRIMARY KEY (key)
+  );
+[debug] [2025-08-12T20:09:02.619Z] CREATE TABLE IF NOT EXISTS 'message_props' (
+    'accountID' VARCHAR,
+    'messageID' VARCHAR NOT NULL,
+    'threadID' VARCHAR NOT NULL,
+    'props' JSON NOT NULL,
+    PRIMARY KEY (accountID, messageID)
+  );
+[debug] [2025-08-12T20:09:02.620Z] CREATE UNIQUE INDEX IF NOT EXISTS idx_null_account_message_props ON message_props (messageID)
+  WHERE accountID IS NULL;
+[debug] [2025-08-12T20:09:02.620Z] CREATE TABLE IF NOT EXISTS 'snoozed_messages' (
+    'messageID' VARCHAR NOT NULL,
+    'accountID' VARCHAR,
+    'threadID' VARCHAR NOT NULL,
+    'messageTimestamp' INTEGER NOT NULL,
+    'remindOnTimestamp' INTEGER NOT NULL,
+    'addedOnTimestamp' INTEGER NOT NULL,
+    'options' JSON NOT NULL,
+    PRIMARY KEY (accountID, messageID)
+  );
+[debug] [2025-08-12T20:09:02.620Z] CREATE UNIQUE INDEX IF NOT EXISTS idx_null_account_snoozed_message ON snoozed_messages (messageID) WHERE accountID IS NULL;
+[debug] [2025-08-12T20:09:02.620Z] CREATE TABLE IF NOT EXISTS 'snoozed_threads' (
+    'accountID' VARCHAR,
+    'threadID' VARCHAR NOT NULL,
+    'remindOnTimestamp' INTEGER NOT NULL,
+    'addedOnTimestamp' INTEGER NOT NULL,
+    'options' JSON NOT NULL,
+    PRIMARY KEY (accountID, threadID)
+  );
+[debug] [2025-08-12T20:09:02.620Z] CREATE UNIQUE INDEX IF NOT EXISTS idx_null_account_snoozed_thread ON snoozed_threads (threadID)
+  WHERE accountID IS NULL;
+[debug] [2025-08-12T20:09:02.620Z] CREATE TABLE IF NOT EXISTS 'scheduled_messages' (
+    'pendingMessageID' VARCHAR NOT NULL,
+    'accountID' VARCHAR,
+    'threadID' VARCHAR NOT NULL,
+    'options' JSON NOT NULL,
+    PRIMARY KEY (pendingMessageID)
+  );
+[debug] [2025-08-12T20:09:02.620Z] CREATE UNIQUE INDEX IF NOT EXISTS idx_account_message ON scheduled_messages (accountID, pendingMessageID);
+[debug] [2025-08-12T20:09:02.620Z] CREATE TABLE IF NOT EXISTS 'counters' (
+    'key' VARCHAR NOT NULL,
+    'date' VARCHAR NOT NULL,
+    'count' INTEGER NOT NULL,
+    PRIMARY KEY(key, date)
+  );
+[debug] [2025-08-12T20:09:02.620Z] CREATE TABLE IF NOT EXISTS 'accounts' (
+    'accountID' VARCHAR NOT NULL,
+    'platformName' VARCHAR NOT NULL,
+    'state' VARCHAR NOT NULL,
+    'user' JSON,
+    'session' JSON,
+    'props' JSON,
+    PRIMARY KEY (accountID)
+  );
+[debug] [2025-08-12T20:09:02.620Z] CREATE TABLE IF NOT EXISTS 'mx_events' (
+    'id' INTEGER PRIMARY KEY AUTOINCREMENT,
+    'origin' VARCHAR NOT NULL, 'eventID' VARCHAR,
+    'roomID' VARCHAR, 'type' VARCHAR,
+    'sender' VARCHAR, 'relatesToEventID' VARCHAR,
+    'relatesToRoomID' VARCHAR, 'originServerTs' INTEGER,
+    'hsOrder' INTEGER, 'event' JSON NOT NULL
+  );
+[debug] [2025-08-12T20:09:02.620Z] CREATE INDEX IF NOT EXISTS idx_eventID ON mx_events (eventID);
+[debug] [2025-08-12T20:09:02.620Z] CREATE INDEX IF NOT EXISTS idx_relatesToEventID ON mx_events (relatesToEventID);
+[debug] [2025-08-12T20:09:02.620Z] CREATE INDEX IF NOT EXISTS idx_relatesToRoomID ON mx_events (relatesToRoomID);
+[debug] [2025-08-12T20:09:02.620Z] CREATE INDEX IF NOT EXISTS idx_type_roomID ON mx_events (type, roomID);
+[debug] [2025-08-12T20:09:02.620Z] CREATE TABLE IF NOT EXISTS 'mx_read_receipts' (
+    'roomID' VARCHAR NOT NULL,
+    'userID' VARCHAR NOT NULL,
+    'relatesToID' VARCHAR NOT NULL,
+    'hsOrder' INTEGER,
+    'timestamp' INTEGER NOT NULL,
+    PRIMARY KEY (roomID, userID)
+  );
+[debug] [2025-08-12T20:09:02.620Z] CREATE INDEX IF NOT EXISTS idx_read_receipts_roomID_relatesToID_userID_timestamp ON mx_read_receipts (roomID, relatesToID, userID, timestamp);
+[debug] [2025-08-12T20:09:02.620Z] CREATE TABLE IF NOT EXISTS 'mx_room_messages' (
+    'id' INTEGER PRIMARY KEY AUTOINCREMENT,
+    'roomID' TEXT NOT NULL,
+    'eventID' TEXT NOT NULL,
+    'senderContactID' TEXT NOT NULL,
+    'timestamp' INTEGER NOT NULL,
+    'isEdited' INTEGER NOT NULL,
+    'lastEditionID' TEXT,
+    'isDetached' INTEGER NOT NULL DEFAULT 0,
+    'lastEditionTimestamp' INTEGER,
+    'lastEditionOrder' INTEGER,
+    'isDeleted' INTEGER NOT NULL,
+    'isEncrypted' INTEGER NOT NULL,
+    'inReplyToID' TEXT,
+    'isReplyThreadFallback' INTEGER,
+    'type' TEXT NOT NULL,
+    'hsOrder' INTEGER NOT NULL,
+    'isSentByMe' INTEGER NOT NULL,
+    'replyThreadID' TEXT,
+    'replyCount' INTEGER,
+    'replyThreadRootID' TEXT,
+    'protocol' TEXT,
+    'shouldNotify' INTEGER,
+    'shouldPreview' INTEGER,
+    'countsAsUnread' INTEGER,
+    'lastDeletionID' TEXT,
+    'editedType' TEXT,
+    'mentions' TEXT,
+    'message' JSON NOT NULL,
+    'sendStatus' JSON,
+    'text_content' TEXT,
+    'text_formattedContent' TEXT,
+    'text_format' TEXT
+  );
+[debug] [2025-08-12T20:09:02.621Z] CREATE INDEX IF NOT EXISTS idx_messages_roomID_eventID_replyThreadRootId_roomID_type ON mx_room_messages (
+    roomID, eventID, replyThreadRootId, roomID, type
+  );
+[debug] [2025-08-12T20:09:02.621Z] CREATE INDEX IF NOT EXISTS idx_messages_roomID_isSentByMe_isDeleted_order_timestamp_eventID ON mx_room_messages (roomID, isSentByMe, isDeleted, hsOrder, timestamp, eventID);
+[debug] [2025-08-12T20:09:02.621Z] CREATE INDEX IF NOT EXISTS idx_messages_roomID_order_timestamp_eventID ON mx_room_messages (roomID, hsOrder, timestamp, eventID);
+[debug] [2025-08-12T20:09:02.621Z] CREATE UNIQUE INDEX IF NOT EXISTS idx_messages_roomD_eventID ON mx_room_messages (roomID, eventID);
+[debug] [2025-08-12T20:09:02.621Z] CREATE UNIQUE INDEX IF NOT EXISTS idx_messages_eventID ON mx_room_messages (eventID);
+[debug] [2025-08-12T20:09:02.621Z] CREATE INDEX IF NOT EXISTS idx_messages_roomID ON mx_room_messages (roomID);
+[debug] [2025-08-12T20:09:02.621Z] CREATE INDEX IF NOT EXISTS idx_messages_roomID_type_hsOrder ON mx_room_messages (roomID, type, hsOrder);
+[debug] [2025-08-12T20:09:02.621Z] CREATE TABLE IF NOT EXISTS 'mx_reactions' (
+    'roomID' VARCHAR NOT NULL,
+    'reactionID' VARCHAR NOT NULL,
+    'eventID' VARCHAR NOT NULL,
+    'senderID' VARCHAR NOT NULL,
+    'description' VARCHAR NOT NULL,
+    'path' VARCHAR,
+    'order' INTEGER NOT NULL,
+    'timestamp' INTEGER NOT NULL,
+    'isEdited' INTEGER NOT NULL,
+    'isDeleted' INTEGER NOT NULL,
+    'isSentByMe' INTEGER NOT NULL,
+    'echoInfo' TEXT,
+    'sendStatus' JSON,
+    'reaction' JSON,
+    PRIMARY KEY (roomID, reactionID)
+  );
+[debug] [2025-08-12T20:09:02.621Z] PRAGMA user_version = 1
+[debug] [2025-08-12T20:09:02.621Z] CREATE INDEX IF NOT EXISTS idx_messages_roomID_type_hsOrder ON mx_room_messages (roomID, type, hsOrder);
+[debug] [2025-08-12T20:09:02.621Z] CREATE INDEX IF NOT EXISTS idx_read_receipts_roomID_relatesToID_userID_timestamp ON mx_read_receipts (roomID, relatesToID, userID, timestamp);
+[debug] [2025-08-12T20:09:02.621Z] CREATE INDEX IF NOT EXISTS idx_reactions_roomID_eventID_isDeleted ON mx_reactions (roomID, eventID, isDeleted);
+[debug] [2025-08-12T20:09:02.621Z] PRAGMA user_version = 2
+[debug] [2025-08-12T20:09:02.622Z] CREATE INDEX IF NOT EXISTS idx_threads_account_timestamp ON threads (accountID, timestamp DESC);
+[debug] [2025-08-12T20:09:02.622Z] CREATE INDEX IF NOT EXISTS idx_room_messages_preview ON mx_room_messages (roomID, type, shouldPreview, hsOrder DESC);
+[debug] [2025-08-12T20:09:02.622Z] CREATE INDEX IF NOT EXISTS idx_read_receipts_covering ON mx_read_receipts (roomID, relatesToID, userID, timestamp);
+[debug] [2025-08-12T20:09:02.622Z] CREATE INDEX IF NOT EXISTS idx_reactions_room_event_deleted ON mx_reactions (roomID, eventID, isDeleted, timestamp DESC);
+[debug] [2025-08-12T20:09:02.622Z] CREATE INDEX IF NOT EXISTS idx_messages_reply ON mx_room_messages (roomID, inReplyToID, eventID, lastEditionID);
+[debug] [2025-08-12T20:09:02.622Z] CREATE INDEX IF NOT EXISTS idx_messages_roomID_type_timestamp ON mx_room_messages (roomID, type, timestamp DESC);
+[debug] [2025-08-12T20:09:02.622Z] PRAGMA user_version = 3
+[debug] [2025-08-12T20:09:02.622Z] ALTER TABLE mx_read_receipts ADD lastVisibleEventID VARCHAR NOT NULL DEFAULT '';
+[debug] [2025-08-12T20:09:02.622Z] UPDATE mx_read_receipts SET lastVisibleEventID = relatesToID;
+[debug] [2025-08-12T20:09:02.622Z] PRAGMA user_version = 4
+[debug] [2025-08-12T20:09:02.623Z] ALTER TABLE mx_room_messages ADD echo_echoID VARCHAR;
+[debug] [2025-08-12T20:09:02.623Z] ALTER TABLE mx_room_messages ADD echo_state VARCHAR;
+[debug] [2025-08-12T20:09:02.623Z] ALTER TABLE mx_room_messages ADD echo_canAutoRetry INTEGER DEFAULT 0;
+[debug] [2025-08-12T20:09:02.623Z] ALTER TABLE mx_room_messages ADD echo_isRetryScheduled INTEGER DEFAULT 0;
+[debug] [2025-08-12T20:09:02.623Z] ALTER TABLE mx_room_messages ADD echo_retryCount INTEGER DEFAULT 0;
+[debug] [2025-08-12T20:09:02.624Z] ALTER TABLE mx_room_messages ADD echo_errorCode INTEGER DEFAULT NULL;
+[debug] [2025-08-12T20:09:02.624Z] ALTER TABLE mx_room_messages ADD echo_errorMessage VARCHAR;
+[debug] [2025-08-12T20:09:02.624Z] ALTER TABLE mx_room_messages ADD echo_groupID VARCHAR;
+[debug] [2025-08-12T20:09:02.624Z] ALTER TABLE mx_room_messages ADD echo_groupIndex INTEGER;
+[debug] [2025-08-12T20:09:02.624Z] PRAGMA user_version = 5
+[debug] [2025-08-12T20:09:02.624Z] CREATE TABLE IF NOT EXISTS 'breadcrumbs' (
+    'id' TEXT NOT NULL,
+    'openCount' INTEGER NOT NULL DEFAULT 0,
+    'sentCount' INTEGER NOT NULL DEFAULT 0,
+    'sentLast' INTEGER NOT NULL DEFAULT 0,
+    'lastOpenTime' INTEGER NOT NULL DEFAULT 0,
+    PRIMARY KEY('id')
+  );
+[debug] [2025-08-12T20:09:02.625Z] CREATE INDEX IF NOT EXISTS idx_breadcrumbs_sentCount_sentLast ON breadcrumbs (sentCount, sentLast DESC);
+[debug] [2025-08-12T20:09:02.625Z] PRAGMA user_version = 6
+[debug] [2025-08-12T20:09:02.626Z] ALTER TABLE mx_read_receipts ADD hsSuborder INTEGER;
+[debug] [2025-08-12T20:09:02.626Z] ALTER TABLE mx_read_receipts ADD hsOrderString VARCHAR;
+[debug] [2025-08-12T20:09:02.626Z] PRAGMA user_version = 7
+[debug] [2025-08-12T20:09:02.626Z] DROP INDEX IF EXISTS idx_null_account_thread;
+[debug] [2025-08-12T20:09:02.626Z] PRAGMA user_version = 8
+[debug] [2025-08-12T20:09:02.627Z] CREATE INDEX IF NOT EXISTS idx_mx_messages_timestamp_desc_visible ON mx_room_messages (timestamp DESC, type, isDeleted)
+    WHERE type != 'HIDDEN' AND isDeleted = 0;
+[debug] [2025-08-12T20:09:02.627Z] PRAGMA user_version = 9
+[debug] [2025-08-12T20:09:02.627Z] SELECT * from key_values
+[debug] [2025-08-12T20:09:02.627Z] SELECT COUNT(*) FROM threads
+[debug] [2025-08-12T20:09:02.628Z] 
+        SELECT DISTINCT thread
+        FROM threads, json_each(json_extract(threads.thread, '$.participants.items'))
+        WHERE json_extract(json_each.value, '$.hasExited') = true
+          AND json_extract(threads.thread, '$.type') = 'group'
+      
+[debug] [2025-08-12T20:09:02.629Z] SELECT value from key_values WHERE key = 'ad:com.beeper.whoami.user_info'
+[debug] [2025-08-12T20:09:02.973Z] 
+SELECT
+  accountID,
+  json_extract(thread, '$.extra.bridgeName') AS bridgeID,
+  GROUP_CONCAT(DISTINCT json_extract(thread, '$.extra.bridge.protocol.id')) AS protocolIDs,
+  CASE
+    WHEN threadID LIKE '%.localhost' THEN 'local'
+    WHEN json_extract(thread, '$.extra.bridge."com.beeper.self_hosted"') = 1 THEN 'self-hosted'
+    ELSE 'cloud'
+  END AS bridgeProvider,
+  CASE
+    WHEN threadID LIKE '%.localhost' THEN json_extract(thread, '$.extra.bridge.channel."fi.mau.receiver"')
+    ELSE json_extract(thread, '$.extra.bridgeName')
+  END AS remoteID
+FROM
+  threads
+WHERE
+  json_extract(thread, '$.extra.bridge.protocol.id') IS NOT NULL
+  AND json_extract(thread, '$.extra.roomType') IS NOT 'm.space'
+  AND (threadID LIKE '%.local' OR threadID LIKE '%.localhost')
+GROUP BY
+  bridgeID,
+  accountID
+ORDER BY
+  accountID
+
+[debug] [2025-08-12T20:09:02.973Z] INSERT OR REPLACE INTO key_values VALUES ('bs:accounts', '[{"accountID":"hungryserv","remo'/*+95 bytes*/)
+[debug] [2025-08-12T20:09:02.973Z] SELECT DISTINCT
+    accountID AS account_id,
+    json_extract(thread, '$.extra.bridge.protocol.id') AS protocol_id,
+    json_extract(thread, '$.extra.bridge.protocol.avatar_url') AS protocol_avatar_url,
+    json_extract(thread, '$.extra.bridge.protocol.displayname') AS protocol_display_name,
+    json_extract(thread, '$.extra.bridge.network.id') AS network_id,
+    json_extract(thread, '$.extra.bridge.network.displayname') AS network_display_name,
+    json_extract(thread, '$.extra.bridge.network.avatar_url') AS network_avatar_url,
+    json_extract(thread, '$.extra.bridge."com.beeper.bridge_name"') as bridge_name,
+    json_extract(thread, '$.extra.bridge."com.beeper.self_hosted"') as self_hosted
+FROM threads
+WHERE
+    json_extract(thread, '$.extra.bridge.protocol.id') IS NOT NULL
+    AND json_extract(thread, '$.extra.roomType') IS NOT 'm.space'
+    AND (threadID LIKE '%:beeper.local' OR threadID LIKE '%.localhost')
+[debug] [2025-08-12T20:09:03.655Z] SELECT * from key_values WHERE key IN ('accountProps','labels','launchCount','lastLoginHint','remoteConfig','tabs','subInfo','serverConfig','bridges','customQuickReactions','lastActivity','problemDraft','beeperState','bs:mapped','bs:accounts','computedSpaces','pendingInvites','localPrefs','ad:im.vector.web.settings','ad:com.beeper.muted','ad:com.beeper.favourites_order','ad:io.element.recent_emoji','ad:m.image_pack','ad:com.beeper.desktop.prefs','ad:com.beeper.whoami.user_info','ad:com.beeper.whoami.client_config.features','ad:com.beeper.bridge_state','ad:com.beeper.chat_list_rules','im.vector.web.settings','com.beeper.muted','com.beeper.favourites_order','io.element.recent_emoji','m.image_pack','com.beeper.desktop.prefs','com.beeper.whoami.user_info','com.beeper.whoami.client_config.features','com.beeper.bridge_state','com.beeper.chat_list_rules')
+[debug] [2025-08-12T20:09:03.656Z] SELECT accountID as id, platformName, state, user, session, props FROM accounts
+[debug] [2025-08-12T20:09:03.662Z] SELECT accountID, threadID, messageID, JSON_EXTRACT(props, '$.starredOn') as starredOn FROM message_props WHERE JSON_EXTRACT(props, '$.starredOn') IS NOT NULL
+[debug] [2025-08-12T20:09:03.662Z] SELECT * FROM snoozed_messages
+[debug] [2025-08-12T20:09:03.662Z] SELECT * FROM snoozed_threads
+[debug] [2025-08-12T20:09:03.662Z] SELECT * FROM scheduled_messages
+[debug] [2025-08-12T20:09:03.664Z] INSERT OR REPLACE INTO key_values VALUES ('labels', '{"$important":{"name":"important'/*+113 bytes*/)
+[debug] [2025-08-12T20:09:03.664Z] INSERT OR REPLACE INTO key_values VALUES ('tabs', '["default","unread","low_priorit'/*+14 bytes*/)
+[debug] [2025-08-12T20:09:03.671Z] INSERT OR REPLACE INTO key_values VALUES ('launchCount', '1')
+[debug] [2025-08-12T20:09:03.832Z] INSERT OR REPLACE INTO key_values VALUES ('beeperState', '{"user_id":"","device_id":"","ac'/*+339 bytes*/)
+[debug] [2025-08-12T20:09:03.833Z] UPDATE accounts SET state = 'enabled' WHERE accountID = 'hungryserv'
+[debug] [2025-08-12T20:09:03.834Z] SELECT threadID, props FROM thread_props WHERE accountID = 'hungryserv'
+[debug] [2025-08-12T20:09:03.835Z] 
+SELECT
+  t.thread,
+  t.timestamp,
+  
+    m.id AS mx_msg_id,
+    m.roomID AS mx_msg_roomID,
+    m.eventID AS mx_msg_eventID,
+    m.message AS mx_msg_msg,
+    m.hsOrder AS mx_msg_hsOrder,
+    m.sendStatus AS mx_msg_sendStatus,
+    (
+        SELECT json_group_object(rr.userID, rr.timestamp)
+        FROM mx_read_receipts rr
+        WHERE rr.roomID = m.roomID
+          AND rr.lastVisibleEventID = m.eventID
+        GROUP BY rr.lastVisibleEventID
+    ) AS mx_msg_readReceipts,
+    (
+        SELECT json_group_array(json(r.reaction))
+        FROM mx_reactions r
+        WHERE r.roomID = m.roomID
+          AND r.eventID = m.eventID
+          AND r.isDeleted = 0
+        ORDER BY r.timestamp DESC
+    ) AS mx_msg_reactions,
+    (
+    SELECT json_object('id', linked.id, 'message', linked.message)
+    FROM mx_room_messages linked
+    WHERE linked.roomID = m.roomID
+      AND (linked.eventID = m.inReplyToID OR linked.lastEditionID = m.inReplyToID)
+      AND m.inReplyToID IS NOT NULL
+    LIMIT 1
+  ) AS mx_msg_linkedMessage,
+    m.echo_echoID AS mx_msg_echo_echoID
+  
+FROM threads t
+LEFT JOIN mx_room_messages m ON m.id = json_extract(t.thread, '$.partialLastMessage.id')
+WHERE t.accountID = 'hungryserv' AND json_extract(t.thread, '$.extra.roomType') IS NOT 'm.space'
+
+ORDER BY t.timestamp DESC
+LIMIT 100
+
+[debug] [2025-08-12T20:09:03.897Z] INSERT OR IGNORE INTO key_values VALUES ('localPrefs', '{}')
+[debug] [2025-08-12T20:09:03.897Z] UPDATE key_values SET value = json_set(value, '$."auto_login_item_set"', json('true')) WHERE key = 'localPrefs'
+[debug] [2025-08-12T20:09:04.107Z] INSERT OR REPLACE INTO key_values VALUES ('remoteConfig', '{"magic_header":"TextsConf","bui'/*+366 bytes*/)
+[log] [2025-08-12T20:09:06.172Z] closing db /home/pedro0210/.config/BeeperTexts/index.db

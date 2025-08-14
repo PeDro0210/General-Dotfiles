@@ -42,4 +42,17 @@ return {
 		end,
 	},
 	vim.lsp.enable("clangd"),
+
+	-- this will just work for pyright with nix-shell, cause I ain't installing pyright, nor the interpreter
+
+	{
+		"neovim/nvim-lspconfig",
+		name = "lspconfig.pyright",
+		ft = { "py" },
+		config = function(_, opts)
+			require("lspconfig").pyright.setup(opts)
+		end,
+	},
+
+	vim.lsp.enable("pyright"),
 }
