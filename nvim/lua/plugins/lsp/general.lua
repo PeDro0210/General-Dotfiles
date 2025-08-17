@@ -55,4 +55,15 @@ return {
 	},
 
 	vim.lsp.enable("pyright"),
+
+	{
+		"neovim/nvim-lspconfig",
+		name = "lspconfig.zls",
+		ft = { "zig" },
+		config = function(_, opts)
+			require("lspconfig").zls.setup(opts)
+		end,
+	},
+
+	vim.lsp.enable("zls"),
 }

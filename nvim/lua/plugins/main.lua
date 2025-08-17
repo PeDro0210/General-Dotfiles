@@ -14,7 +14,7 @@ return {
 		require("plugins.db-related.dadbod"),
 	},
 	{
-		require("plugins.general.telescope"),
+		require("plugins.general.img_support"),
 		require("plugins.general.treesitter"),
 	},
 	{
