@@ -19,6 +19,7 @@ return {
 	},
 	{
 		require("plugins.debugging.rustaceanvim"),
+		require("plugins.debugging.trouble"),
 	},
 	{
 		-- The only thing that I hate about lazy
@@ -30,15 +31,6 @@ return {
 
 	--General Configs
 	{
-		-- change trouble config
-		{
-			"folke/trouble.nvim",
-			-- opts will be merged with the parent spec
-			opts = { use_diagnostic_signs = true },
-		},
-
-		-- disable trouble
-		{ "folke/trouble.nvim", enabled = false },
 
 		-- override nvim-cmp and add cmp-emoji
 		{
@@ -47,25 +39,6 @@ return {
 			---@param opts cmp.ConfigSchema
 			opts = function(_, opts)
 				table.insert(opts.sources, { name = "emoji" })
-			end,
-		},
-		-- the opts function can also be used to change the default opts:
-		{
-			"nvim-lualine/lualine.nvim",
-			event = "VeryLazy",
-			opts = function(_, opts)
-				table.insert(opts.sections.lualine_x, "😄")
-			end,
-		},
-
-		-- or you can return new options to override all the defaults
-		{
-			"nvim-lualine/lualine.nvim",
-			event = "VeryLazy",
-			opts = function()
-				return {
-					--[[add your custom lualine config here]]
-				}
 			end,
 		},
 	},
