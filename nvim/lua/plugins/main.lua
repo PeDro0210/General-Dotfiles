@@ -5,6 +5,7 @@ return {
 		-- Themes
 		require("plugins.themes.synthwave84"),
 		require("plugins.themes.alpha"),
+		require("plugins.themes.image"),
 	},
 	{
 		-- Lsp
