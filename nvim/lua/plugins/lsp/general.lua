@@ -4,6 +4,9 @@ local lsps_with_file_types = {
 	clangd = { "c", "cpp", "cc" },
 	pyright = { "py" },
 	zls = { "zig" },
+	svelte = { "svelte" },
+	ts_ls = { "ts", "tsx" },
+	taplo = { "toml" },
 }
 
 local function format_lsp(lsp_name, file_types)
@@ -27,7 +30,7 @@ local function inyect_lsps_args_into_formatter()
 	local formatted_lsps = {}
 
 	for lsp, file_types in pairs(lsps_with_file_types) do
-		table.insert(formatted_lsps, format_lsp(lsp, file_types)) -- I can't really handle this indexing
+		table.insert(formatted_lsps, format_lsp(lsp, file_types))
 	end
 
 	return formatted_lsps
@@ -35,7 +38,7 @@ end
 
 return {
 
-	vim.lsp.enable("lua_ls"),
+	vim.lsp.enable("lua_ls"), -- cause' lua lsp is like supported out of the box
 
 	inyect_lsps_args_into_formatter(),
 

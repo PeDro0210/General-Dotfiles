@@ -1,6 +1,6 @@
 return {
 	"folke/trouble.nvim",
-	opts = { use_diagnostic_signs = true }, -- for default options, refer to the configuration section for custom setup.
+	opts = { use_diagnostic_signs = true, win = { type = "float", relative = "editor" }, focus = true }, -- for default options, refer to the configuration section for custom setup.
 	cmd = "Trouble",
 	keys = {
 		{

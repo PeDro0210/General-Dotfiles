@@ -14,7 +14,7 @@
     "label" : "logout",
     "action" : "loginctl kill-session '' --signal=SIGINT",
     "text" : "Logout",
-    "keybind" : "e"
+    "keybind" : "l"
 }
 
 

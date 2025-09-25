@@ -9,4 +9,8 @@ if status is-interactive
     source ~/.config/fish/env_vars/aliases.fish
     source ~/.config/fish/env_vars/general_vars.fish
     source ~/.config/fish/env_vars/path_vars.fish
+
+    # For having sakura pop up
+
+    fastfetch
 end
