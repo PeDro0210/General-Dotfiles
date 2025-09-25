@@ -14,6 +14,79 @@ return {
 				function() end,
 				desc = "which_key_ignore",
 			},
+			{
+
+				"<leader>c",
+				-- not adding nothing for ignoring the key
+				function() end,
+				desc = "which_key_ignore",
+			},
+			{
+
+				"<leader>g",
+				-- not adding nothing for ignoring the key
+				function() end,
+				desc = "which_key_ignore",
+			},
+			{
+
+				"<leader>K",
+				-- not adding nothing for ignoring the key
+				function() end,
+				desc = "which_key_ignore",
+			},
+			{
+
+				"<leader>u",
+				-- not adding nothing for ignoring the key
+				function() end,
+				desc = "which_key_ignore",
+			},
+			{
+
+				"<leader>`",
+				-- not adding nothing for ignoring the key
+				function() end,
+				desc = "which_key_ignore",
+			},
+
+			{
+
+				"<leader>,",
+				-- not adding nothing for ignoring the key
+				function() end,
+				desc = "which_key_ignore",
+			},
+
+			{
+
+				"<leader>S",
+				-- not adding nothing for ignoring the key
+				function() end,
+				desc = "which_key_ignore",
+			},
+			{
+
+				"<leader>L",
+				-- not adding nothing for ignoring the key
+				function() end,
+				desc = "which_key_ignore",
+			},
+
+			{
+
+				"<leader>?",
+				-- not adding nothing for ignoring the key
+				function() end,
+				desc = "which_key_ignore",
+			},
+			{
+
+				"<leader>.",
+				-- not adding nothing for ignoring the key
+				function() end,
+				desc = "which_key_ignore",
+			},
 		},
 	},
 }
