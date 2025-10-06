@@ -7,6 +7,7 @@ local lsps_with_file_types = {
 	svelte = { "svelte" },
 	ts_ls = { "ts", "tsx" },
 	taplo = { "toml" },
+	qmlls = { "qml" },
 }
 
 local function format_lsp(lsp_name, file_types)

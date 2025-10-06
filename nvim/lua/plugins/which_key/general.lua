@@ -14,13 +14,7 @@ return {
 				function() end,
 				desc = "which_key_ignore",
 			},
-			{
 
-				"<leader>c",
-				-- not adding nothing for ignoring the key
-				function() end,
-				desc = "which_key_ignore",
-			},
 			{
 
 				"<leader>g",
