@@ -4,10 +4,10 @@ palette = "dark"
 
 [templates]
 rofi.template = 'colors-rofi.rasi'
-rofi.target = '~/.config/rofi/shared/colors.rasi'
+rofi.target = '~/.config/rofi/colors.rasi'
+
 waybar.template = 'colors-waybar.css'
-waybar.target = '~/.config/waybar/colors-wallust.css'
+waybar.target = '~/.config/waybar/colors.css'
+
 hypr.template = 'colors-hypr.conf'
-hypr.target = '~/.config/hypr/themes/wallust.conf'
-ghostty.template = 'colors-ghostty.conf'
-ghostty.target = '~/.config/ghostty/themes/wallust.conf'
+hypr.target = '~/.config/hypr/wallust.conf'

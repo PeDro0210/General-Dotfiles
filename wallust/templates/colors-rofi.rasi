@@ -1,19 +1,21 @@
 * {
-    selected-text:	{{color0}};
-    selected-background: {{color4}};
+    
+  bg     : {{background}};
+  border : {{color0}};
+  fg0     : {{foreground}};
+  fg1     : {{color7}};
+  fg2     : {{color8}};
+  red     : {{color6}};
+  green   : {{color4}};
+  yellow  : {{color5}};
+  blue    : {{color3}};
+  magenta : {{color2}};
+  cyan    : {{color1}};
 
-    prompt-text: {{color0}};
-    prompt-background: transparent;
+  accent: {{color9}};
+  urgent: @yellow;
 
-    normal-text: {{foreground}};
-    normal-background: transparent;
+  background-color : transparent;
+  text-color       : @fg0;
 
-    window-border: {{color4}};
-    window-background: {{color6}}0D;
-
-    scrollbar-filled: {{color4}};
-    scrollbar-empty: {{color0}};
-
-    error-message: {{color7}};
-    error-message-border: {{color15}};
 }

@@ -1,0 +1,21 @@
+* {
+    
+  bg     : #222324;
+  border : #47494A;
+  fg0     : #FEFDBC;
+  fg1     : #F5F497;
+  fg2     : #ABAA69;
+  red     : #FBF93F;
+  green   : #ACF6FA;
+  yellow  : #F4E8F2;
+  blue    : #EE6DAA;
+  magenta : #949F5C;
+  cyan    : #6F94B0;
+
+  accent: #6F94B0;
+  urgent: @yellow;
+
+  background-color : transparent;
+  text-color       : @fg0;
+
+}

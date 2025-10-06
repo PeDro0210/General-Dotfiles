@@ -1,24 +1,9 @@
+
+@import "~/.config/rofi/colors.rasi"
+
 * {
 
   font:   "Pixel Code Regular 11";
-
-  bg     : #272336;
-  border : #3A385D;
-  fg0     : #6E828F;
-  fg1     : #00F7FD;
-  fg2     : #FF74E0;
-  red     : #FF74E0;
-  green   : #9ece6a;
-  yellow  : #e0af68;
-  blue    : #7aa2f7;
-  magenta : #9a7ecc;
-  cyan    : #4abaaf;
-
-  accent: #3A385D;
-  urgent: @yellow;
-
-  background-color : transparent;
-  text-color       : @fg0;
 
   margin  : 0;
   padding : 0;
@@ -41,7 +26,7 @@ window {
   background-color: @bg;
   border: 3px;
   //This one is for doing the effects I do with the pink and the skyblue
-  background-image: linear-gradient(to right,#FF74E0,#00F7FD);
+  background-image: linear-gradient(to right, #FF74E0, #00F7FD);
 }
 
 inputbar {
