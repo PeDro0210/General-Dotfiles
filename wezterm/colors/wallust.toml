@@ -1,0 +1,15 @@
+
+[colors]
+foreground = "#FFFFFF"
+background = "#262335"
+
+cursor_bg = "#FF7EDB"
+cursor_fg = "#03EDF9"
+
+cursor_border = "#03EDF9"
+
+split = "#FFFFFF"
+
+ansi = ["#011627", "#FE4450", "#72F1B8", "#FEDE5D", "#03EDF9", "#FF7EDB", "#03EDF9", "#FFFFFF"]
+brights = ["#575656", "#FE4450", "#72F1B8", "#FEDE5D", "#03EDF9", "#FF7EDB", "#03EDF9", "#FFFFFF"]
+

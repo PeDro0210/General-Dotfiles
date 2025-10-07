@@ -2,10 +2,6 @@ local wezterm = require("wezterm")
 
 return {
 	scrollback_lines = 3500,
-	colors = {
-		cursor_border = "#FFFFFF",
-		cursor_fg = "#FFFFFF",
-	},
 	font = wezterm.font("Pixel Code", { weight = "Regular" }),
 	-- font
 	window_background_opacity = 0.7,
@@ -17,7 +13,7 @@ return {
 		top = 0,
 		bottom = 0,
 	},
-	color_scheme = "Synthwave (Gogh)",
+	color_scheme = "wallust",
 	window_decorations = "NONE",
 	inactive_pane_hsb = {
 		brightness = 0.7,

@@ -11,3 +11,11 @@ waybar.target = '~/.config/waybar/colors.css'
 
 hypr.template = 'colors-hypr.conf'
 hypr.target = '~/.config/hypr/wallust.conf'
+
+wezterm.template = 'colors-wezterm.toml'
+wezterm.target = '~/.config/wezterm/colors/wallust.toml'
+
+wlogout.template = 'colors-wlogout.css'
+wlogout.target = '~/.config/wlogout/colors.css'
+
+

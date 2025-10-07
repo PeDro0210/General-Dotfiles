@@ -3,7 +3,7 @@
   bg     : {{background}};
   border : {{color0}};
   fg0     : {{foreground}};
-  fg1     : {{color7}};
+  fg1     : {{color6}};
   fg2     : {{color8}};
   red     : {{color6}};
   green   : {{color4}};
@@ -12,7 +12,7 @@
   magenta : {{color2}};
   cyan    : {{color1}};
 
-  accent: {{color9}};
+  accent: {{color5}};
   urgent: @yellow;
 
   background-color : transparent;

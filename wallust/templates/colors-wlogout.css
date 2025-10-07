@@ -1,0 +1,7 @@
+@define-color background alpha({{background}},0.5);
+
+@define-color text-color {{color5}};
+@define-color color-border {{color6}};
+
+
+

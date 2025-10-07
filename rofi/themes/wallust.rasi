@@ -26,7 +26,7 @@ window {
   background-color: @bg;
   border: 3px;
   //This one is for doing the effects I do with the pink and the skyblue
-  background-image: linear-gradient(to right, #FF74E0, #00F7FD);
+  border-color: @border;
 }
 
 inputbar {
