@@ -8,12 +8,14 @@ return {
 	-- tab bar
 	hide_tab_bar_if_only_one_tab = true,
 	window_padding = {
-		left = 10,
+		left = 0,
 		right = 0,
 		top = 0,
 		bottom = 0,
 	},
+	color_scheme_dirs = { "./colors" },
 	color_scheme = "wallust",
+
 	window_decorations = "NONE",
 	inactive_pane_hsb = {
 		brightness = 0.7,

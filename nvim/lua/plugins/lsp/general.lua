@@ -7,7 +7,7 @@ local lsps_with_file_types = {
 	svelte = { "svelte" },
 	ts_ls = { "ts", "tsx" },
 	taplo = { "toml" },
-	qmlls = { "qml" },
+	hls = { "hs" },
 }
 
 local function format_lsp(lsp_name, file_types)
@@ -40,6 +40,10 @@ end
 return {
 
 	vim.lsp.enable("lua_ls"), -- cause' lua lsp is like supported out of the box
+
+	require("lspconfig").qmlls.setup({
+		cmd = { "qmlls", "-E" },
+	}),
 
 	inyect_lsps_args_into_formatter(),
 

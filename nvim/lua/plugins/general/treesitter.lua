@@ -38,6 +38,7 @@ return {
 				"typescript",
 				"nix",
 				"qml",
+				"qmljs",
 			},
 		},
 	},

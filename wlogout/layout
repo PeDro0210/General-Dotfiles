@@ -6,7 +6,7 @@
 }
 {
     "label" : "shutdown",
-    "action" : "systemctl poweroff",
+    "action" : "~/Documents/Shell-Scripts/wlogout/shutdown.sh",
     "text" : "Shutdown",
     "keybind" : "s"
 }
