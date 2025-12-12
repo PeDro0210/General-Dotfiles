@@ -21,18 +21,17 @@ Rectangle {
     BorderImage {
         anchors {
             fill: parent
-            margins: 1
         }
         border {
-            left: 30
-            top: 30
-            right: 30
-            bottom: 30
+            left: 10
+            top: 10
+            right: 10
+            bottom: 10
         }
         horizontalTileMode: BorderImage.Stretch
         verticalTileMode: BorderImage.Stretch
         source: "../../images/base-border.png"
     }
 
-    radius: 10.0
+    radius: 8.0
 }

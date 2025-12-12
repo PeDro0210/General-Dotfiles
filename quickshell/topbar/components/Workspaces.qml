@@ -1,4 +1,5 @@
 import QtQuick
+import QtQuick.Window
 import QtQuick.Layouts
 import Quickshell
 import Quickshell.Io
@@ -20,13 +21,30 @@ RowLayout {
     Repeater {
         model: parent.currentWorkspaces
 
+        property int focusedId: Hyprland.focusedWorkspace
+
         FfRectangle {
             width: 50
-            Text{
+
+            Text {
                 anchors.centerIn: parent
                 text: modelData.id
                 font: mainFont.name
                 color: theme.text_color
+            }
+
+            Image {
+                width: parent.width / 2
+                height: parent.height / 2
+                source: "../../images/selection-cursor.png"
+                visible: 1 == modelData.id
+                anchors.centerIn: parent
+                transform: [
+                    Translate {
+                        y: 5
+                        x: -20
+                    }
+                ]
             }
         }
     }
