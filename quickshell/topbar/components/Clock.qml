@@ -7,6 +7,9 @@ import QtQuick
 import QtQuick.Layouts
 
 import "../common"
+import "../.."
+
+
 
 //TODO: add border image
 
@@ -26,6 +29,6 @@ FfRectangle {
         anchors.centerIn: parent
         text: Qt.formatDateTime(clock.date, "ddd dd, hh:mm")
         font: mainFont.name
-        color: theme.text_color
+        color: Config.theme.text_color
     }
 }

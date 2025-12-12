@@ -7,6 +7,7 @@ import Quickshell.Hyprland
 import QtQuick.Controls.Basic
 
 import "../common"
+import "../.."
 
 // taking dinki config
 RowLayout {
@@ -21,23 +22,21 @@ RowLayout {
     Repeater {
         model: parent.currentWorkspaces
 
-        property int focusedId: Hyprland.focusedWorkspace
-
         FfRectangle {
-            width: 50
+            width: 75
 
             Text {
                 anchors.centerIn: parent
                 text: modelData.id
                 font: mainFont.name
-                color: theme.text_color
+                color: Config.theme.text_color
             }
 
             Image {
-                width: parent.width / 2
+                width: parent.width / 3
                 height: parent.height / 2
                 source: "../../images/selection-cursor.png"
-                visible: 1 == modelData.id
+                visible: modelData.focused
                 anchors.centerIn: parent
                 transform: [
                     Translate {
