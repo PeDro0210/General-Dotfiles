@@ -5,8 +5,8 @@
 
 /* ---- Window ---- */
 window {
-  width: inherit;
-  height: inherit;
+  width: 364px;
+  height: 375px;
 }
 
 /* ---- Mainbox ---- */
@@ -18,6 +18,9 @@ mainbox {
 /* ---- Entry ---- */
 entry {
   width: inherit;
+  spacing  : 8px;
+  padding  : 4px 8px;
+ 
   placeholder: "Search  Clipboard";
 }
 
@@ -26,7 +29,7 @@ listview {
   columns: 1;
   lines: 8;
   fixed-height: true;
-  spacing: 10px;
+  spacing: 8px;
   cycle: true;
 }
 
@@ -42,6 +45,5 @@ element-icon {
 element-text {
   horizontal-align: 0.0;
   vertical-align: 0.5;
-  margin: 0px;
   padding: 0px;
 }

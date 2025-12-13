@@ -18,7 +18,7 @@ element-icon, element-text, scrollbar {
 mainbox{
   background-color: @bg;
 
-  padding: 15px 5px 0px 5px;
+  padding: 11px 5px 11px 5px;
 
   background-image: url("../images/base-border.png", width);
 }
@@ -26,8 +26,10 @@ mainbox{
 window {
   location : north;
   anchor   : north;
-  width    : 365px;
+  width    : 364px;
   height: 375px;
+
+  border-radius: 10px;
 
   //This one is for doing the effects I do with the pink and the skyblue
 
@@ -81,7 +83,6 @@ element alternate active {
 }
 
 element selected {
-  text-color       : @fg2;
   background-color : @accent;
 }
 

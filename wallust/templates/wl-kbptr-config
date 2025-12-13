@@ -3,7 +3,7 @@ home_row_keys=
 modes=tile,bisect
 
 [mode_tile]
-label_color=#BEBFCD
+label_color={{foreground}}
 label_select_color=#fd0d
 unselectable_bg_color=#272336bf
 selectable_bg_color=#272336bf
@@ -22,7 +22,7 @@ label_font_family=Pixel Code
 label_symbols=abcdefghijklmnopqrstuvwxyz
 
 [mode_bisect]
-label_color=#BEBFCD
+label_color={{foreground}}
 label_font_size=20
 label_font_family=Pixel Code
 label_padding=12
