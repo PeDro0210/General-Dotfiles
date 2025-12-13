@@ -18,4 +18,5 @@ wezterm.target = '~/.config/wezterm/colors/wallust.toml'
 wlogout.template = 'colors-wlogout.css'
 wlogout.target = '~/.config/wlogout/colors.css'
 
-
+quickshell.template ='config.qml'
+quickshell.target = '~/.config/quickshell/Config.qml'

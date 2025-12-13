@@ -6,7 +6,7 @@ plugins = [
 ]
 
 [scratchpads.term]
-animation = "fromTop"
+animation = "fromBottom"
 command = "wezterm start --class wez-dropterm"
 class = "wez-dropterm"
-size = "75% 60%"
+size = "75% 85%"

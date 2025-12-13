@@ -28,7 +28,8 @@ FfRectangle {
         id: clock_text
         anchors.centerIn: parent
         text: Qt.formatDateTime(clock.date, "ddd dd, hh:mm")
-        font: mainFont.name
+        font.family: mainFont.name
+        font.pixelSize: 16
         color: Config.theme.text_color
     }
 }

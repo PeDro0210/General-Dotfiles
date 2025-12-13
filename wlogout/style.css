@@ -35,10 +35,6 @@ button:hover {
     background-image: image(url("/home/pedro0210/.config/wlogout/logout.png"));
 }
 
-#suspend {
-    background-image: image(url("/home/pedro0210/.config/wlogout/suspend.png"));
-}
-
 #shutdown {
     background-image: image(
         url("/home/pedro0210/.config/wlogout/shutdown.png")

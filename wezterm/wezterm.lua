@@ -3,14 +3,15 @@ local wezterm = require("wezterm")
 return {
 	scrollback_lines = 3500,
 	font = wezterm.font("Pixel Code", { weight = "Regular" }),
+	font_size = 12,
 	-- font
 	window_background_opacity = 0.7,
 	-- tab bar
 	hide_tab_bar_if_only_one_tab = true,
 	window_padding = {
-		left = 0,
+		left = 5,
 		right = 0,
-		top = 0,
+		top = 10,
 		bottom = 0,
 	},
 	color_scheme_dirs = { "./colors" },

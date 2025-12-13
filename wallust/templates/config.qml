@@ -7,9 +7,9 @@ import Quickshell.Io
 Singleton {
     id: root
     property var theme: {
-        "text_color": "#BEBFCD",
-        "background_1": "#0000A1",
-        "background_2": "#2A2867"
+        "text_color": "{{foreground}}",
+        "background_1": "{{color4}}",
+        "background_2": "{{color5}}"
 
     }
 }

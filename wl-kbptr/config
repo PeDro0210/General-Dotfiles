@@ -3,12 +3,12 @@ home_row_keys=
 modes=tile,bisect
 
 [mode_tile]
-label_color=#ff74e0e6
+label_color=#ffffffff
 label_select_color=#fd0d
 unselectable_bg_color=#272336bf
 selectable_bg_color=#272336bf
 selectable_border_color=#3A385D
-label_font_family=sans-serif
+label_font_family=Pixel Code
 label_symbols=abcdefghijklmnopqrstuvwxyz
 
 [mode_floating]
@@ -18,13 +18,13 @@ label_select_color=#fd0d
 unselectable_bg_color=#2226
 selectable_bg_color=#1718
 selectable_border_color=#040c
-label_font_family=sans-serif
+label_font_family=Pixel Code
 label_symbols=abcdefghijklmnopqrstuvwxyz
 
 [mode_bisect]
-label_color=#ff74e0e6
+label_color=#ffffffff
 label_font_size=20
-label_font_family=sans-serif
+label_font_family=Pixel Code
 label_padding=12
 pointer_size=20
 pointer_color=#FFE200

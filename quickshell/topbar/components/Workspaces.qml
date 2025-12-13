@@ -28,7 +28,8 @@ RowLayout {
             Text {
                 anchors.centerIn: parent
                 text: modelData.id
-                font: mainFont.name
+                font.family: mainFont.name
+                font.pixelSize: 16
                 color: Config.theme.text_color
             }
 

@@ -3,6 +3,8 @@ import QtQuick.Layouts
 import Quickshell.Io
 import Quickshell.Hyprland
 
+import "../.."
+
 Rectangle {
     width: parent.width
     height: parent.height
@@ -10,11 +12,11 @@ Rectangle {
     gradient: Gradient {
         GradientStop {
             position: 0.0
-            color: "#2E2E84"
+            color: Config.theme.background_0
         }
         GradientStop {
             position: 1.0
-            color: "#111133"
+            color: Config.theme.background_1
         }
     }
 
