@@ -8,6 +8,7 @@
   margin  : 0;
   padding : 0;
   spacing : 0;
+
 }
 
 element-icon, element-text, scrollbar {
@@ -16,18 +17,22 @@ element-icon, element-text, scrollbar {
 
 mainbox{
   background-color: @bg;
+
+  padding: 15px 5px 0px 5px;
+
+  background-image: url("../images/base-border.png", width);
 }
 
 window {
   location : north;
   anchor   : north;
-  width    : 512px;
+  width    : 365px;
+  height: 375px;
 
-  background-color: @bg;
-  border: 3px;
   //This one is for doing the effects I do with the pink and the skyblue
-  border-color: @border;
+
 }
+
 
 inputbar {
   spacing  : 8px;
@@ -35,11 +40,10 @@ inputbar {
   children : [ entry ];
 
   border: 0px 0px 1px 0px;
+
   border-color: @border;
   background-color: @bg;
 }
-
-
 
 
 icon-search, entry, element-icon, element-text {
@@ -56,8 +60,7 @@ listview {
   padding      : 0px 0px;
   lines        : 12;
   columns      : 1;
-  fixed-height : false;
-  dynamic      : true;
+  fixed-height : true;
 }
 
 element {
