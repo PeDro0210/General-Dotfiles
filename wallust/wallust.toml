@@ -6,6 +6,10 @@ palette = "dark"
 rofi.template = 'colors-rofi.rasi'
 rofi.target = '~/.config/rofi/colors.rasi'
 
+rofi_config.template = 'wallust-config.rasi'
+rofi_config.target = '~/.config/rofi/themes/wallust.rasi'
+
+
 waybar.template = 'colors-waybar.css'
 waybar.target = '~/.config/waybar/colors.css'
 

@@ -12,7 +12,7 @@ window {
 button {
     color: @text-color;
     font-size: 16px;
-    background-color: @background;
+    background-color: @background-one;
     border-style: none;
     background-repeat: no-repeat;
     background-position: center;

@@ -1,7 +1,8 @@
-@define-color background #17151E;
+@define-color background-one #2A2867;
 
-@define-color text-color #2A2867;
-@define-color color-border #444870;
+@define-color background-two #0000A1;
 
+@define-color text-color #BEBFCD;
 
+@define-color color-border #999BAF;
 

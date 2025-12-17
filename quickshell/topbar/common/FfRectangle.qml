@@ -12,11 +12,11 @@ Rectangle {
     gradient: Gradient {
         GradientStop {
             position: 0.0
-            color: Config.theme.background_0
+            color: Config.theme.background_1
         }
         GradientStop {
             position: 1.0
-            color: Config.theme.background_1
+            color: Config.theme.background_2
         }
     }
 
