@@ -6,7 +6,7 @@ import Quickshell.Hyprland
 import QtQuick
 import QtQuick.Layouts
 
-import "../common"
+import "../../common"
 import "../.."
 
 

@@ -6,7 +6,7 @@ import Quickshell.Io
 import Quickshell.Hyprland
 import QtQuick.Controls.Basic
 
-import "../common"
+import "../../common"
 import "../.."
 
 // taking dinki config
@@ -40,6 +40,7 @@ RowLayout {
                 visible: modelData.focused
                 anchors.centerIn: parent
                 transform: [
+                    // offset cursor for active workspaces
                     Translate {
                         y: 5
                         x: -20

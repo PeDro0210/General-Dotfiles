@@ -3,7 +3,7 @@ import QtQuick.Layouts
 import Quickshell.Io
 import Quickshell.Hyprland
 
-import "../.."
+import "../"
 
 Rectangle {
     width: parent.width
@@ -32,7 +32,7 @@ Rectangle {
         }
         horizontalTileMode: BorderImage.Stretch
         verticalTileMode: BorderImage.Stretch
-        source: "../../images/base-border.png"
+        source: "../images/base-border.png"
     }
 
     radius: 8.0
