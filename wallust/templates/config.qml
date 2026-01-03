@@ -9,7 +9,7 @@ Singleton {
     property var theme: {
         "text_color": "{{foreground}}",
         "background_1": "{{color5}}",
-        "background_2": "{{color4}}"
-
+        "background_2": "{{color4}}",
+        "highlight_color": "{{color3}}"
     }
 }

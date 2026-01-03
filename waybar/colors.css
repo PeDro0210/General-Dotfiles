@@ -1,10 +1,10 @@
-@define-color foreground #BEBFCD;
-@define-color background #17151E;
+@define-color foreground #F6F6F4;
+@define-color background #201F1E;
 
-@define-color border-color-0 #2A2867;
-@define-color border-color-1 #444870;
+@define-color border-color-0 #C5837D;
+@define-color border-color-1 #E6E6E1;
 
-@define-color inactive-border-color-0 #6B6C7A;
+@define-color inactive-border-color-0 #A4A4A2;
 
-@define-color active-color #030275;
+@define-color active-color #A91F1D;
 

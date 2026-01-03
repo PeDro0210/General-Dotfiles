@@ -5,7 +5,6 @@ return {
 	font = wezterm.font("Pixel Code", { weight = "Regular" }),
 	font_size = 12,
 	-- font
-	window_background_opacity = 0.7,
 	-- tab bar
 	hide_tab_bar_if_only_one_tab = true,
 	window_padding = {
