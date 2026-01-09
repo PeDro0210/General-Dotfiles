@@ -9,16 +9,15 @@ import "../common"
 import "../"
 
 PanelWindow {
-    id: power_option_menu
+    id: power_option_window
+
+    width: 232
+    height: 128
 
     color: "transparent"
 
-    visible: false
-
     // for the keybaord to not focus any other window and just have keyboard access in the panel
-    WlrLayershell.keyboardFocus: WlrKeyboardFocus.Exclusive
-
-    focusable: true
+    //WlrLayershell.keyboardFocus: WlrKeyboardFocus.Exclusive
 
     property ListModel power_options_list: ListModel {
         ListElement {
@@ -36,81 +35,100 @@ PanelWindow {
             action: "loginctl kill-session '' --signal=SIGINT"
             is_active: false
         }
+        ListElement {
+            label: "kill quickshell"
+            action: "~/Documents/Shell-Scripts/debug/close_quickshell.sh"
+            is_active: false
+        }
     }
 
-    Item {
-        id: keyboard_layer
-        focus: true
-        PopupWindow {
-            implicitWidth: 232
+    FfRectangle {
+        id: power_option_frame
 
-            anchor.rect.x: Screen.width  / - 28
+        states: State {
+            name: "hidden"
 
-            anchor.window: power_option_menu
-            color: "transparent"
-            visible: true
+            PropertyChanges {
+                power_option_window.visible: false
+                power_option_frame.opacity: 0
+            }
+        }
 
-            FfRectangle {
+        transitions: Transition {
+            reversible: true
+            to: "hidden"
 
-                ListView {
-                    id: power_option_list
-                    anchors.fill: parent
+            SequentialAnimation {
+                OpacityAnimator {
+                    duration: 1000
+                }
+                PropertyAction {
+                    target: power_option_window
+                    property: "visible"
+                }
+            }
+        }
+        visible: false
+        width: 232
+        height: 32
 
-                    model: power_option_menu.power_options_list
-                    Component {
-                        id: power_options_delegate
-                        Rectangle {
-                            id: wrapper
-                            required property string label
-                            required property string action
-                            required property bool is_active
-                            width: 232
-                            height: 32
-                            color: "transparent"
+        anchors.fill: parent
+        ListView {
+            id: power_option_list
+            anchors.fill: parent
 
+            model: power_option_window.power_options_list
+            Component {
+                id: power_options_delegate
+                Rectangle {
+                    id: wrapper
+                    required property string label
+                    required property string action
+                    required property bool is_active
+                    width: 232
+                    height: 32
+                    color: "transparent"
 
-                            Text {
-                                id: power_option
-                                text: "<font color=" + "\"" + Config.theme.highlight_color + "\"" +">"  + wrapper.label.charAt(0) + "</font>" + wrapper.label.slice(-(wrapper.label.length - 1))
-                                anchors.centerIn: parent
-                                font.family: mainFont.name
-                                font.pixelSize: 16
-                                color: Config.theme.text_color
-                            }
-                            Process {
-                                running: wrapper.is_active
-                                // runs the bash bin and then the desire one, cause Quickshell doesn't run bin with a shell directly
-                                command: ["bash", "-c", action]
-                            }
-                        }
+                    Text {
+                        id: power_option
+                        text: "<font color=" + "\"" + Config.theme.highlight_color + "\"" + ">" + wrapper.label.charAt(0) + "</font>" + wrapper.label.slice(-(wrapper.label.length - 1))
+                        anchors.centerIn: parent
+                        font.family: mainFont.name
+                        font.pixelSize: 16
+                        color: Config.theme.text_color
                     }
-
-                    delegate: power_options_delegate
+                    Process {
+                        running: wrapper.is_active
+                        // runs the bash bin and then the desire one, cause Quickshell doesn't run bin with a shell directly
+                        command: ["bash", "-c", action]
+                    }
                 }
             }
-        }
 
-        Scope {
-            id: appLauncherIpc
-            IpcHandler {
-                target: "powerOptionsMenu"
-                function togglePowerOptionsMenu() {
-                    power_option_menu.visible = !power_option_menu.visible;
-                }
+            delegate: power_options_delegate
+        }
+    }
+
+    Scope {
+        id: appLauncherIpc
+        IpcHandler {
+            target: "powerOptionsMenu"
+            function togglePowerOptionsMenu() {
+                power_option_frame.state = (power_option_frame.state == "visible" ? "not-visible" : "visible");
             }
         }
+    }
 
-        Keys.onPressed: event => {
-            if (event.key == Qt.Key_R) {
-                console.info("Pressed for restart");
-                power_options_list.get(0).is_active = true;
-            } else if (event.key == Qt.Key_S) {
-                console.info("Pressed for shutdown");
-                power_options_list.get(1).is_active = true;
-            } else if (event.key == Qt.Key_L) {
-                console.info("Pressed for logout");
-                power_options_list.get(2).is_active = true;
-            }
+    Keys.onPressed: event => {
+        if (event.key == Qt.Key_R) {
+            console.info("Pressed for restart");
+            power_options_list.get(0).is_active = true;
+        } else if (event.key == Qt.Key_S) {
+            console.info("Pressed for shutdown");
+            power_options_list.get(1).is_active = true;
+        } else if (event.key == Qt.Key_L) {
+            console.info("Pressed for logout");
+            power_options_list.get(2).is_active = true;
         }
     }
 }
