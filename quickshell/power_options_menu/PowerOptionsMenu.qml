@@ -16,13 +16,12 @@ PanelWindow {
     implicitWidth: 232
     implicitHeight: 96
 
-    color: "red"
+    color: "transparent"
 
     // for the keybaord to not focus any other window and just have keyboard access in the panel
     WlrLayershell.keyboardFocus: WlrKeyboardFocus.Exclusive
 
-    Item {
-        property ListModel power_options_list: ListModel {
+      property ListModel power_options_list: ListModel {
             ListElement {
                 label: "reboot"
                 action: "systemctl reboot"
@@ -58,12 +57,6 @@ PanelWindow {
                       visible: false
                     }
                 }
-
-                PropertyChanges {
-                    power_option_frame {
-                      opacity: 0
-                    }
-                }
             }
 
             transitions: Transition {
@@ -74,7 +67,7 @@ PanelWindow {
                     OpacityAnimator {
                       from: 1;
                       to: 0;
-                      duration: 1000
+                      duration: 100
                     }
                     PropertyAction {
                         target: power_option_window
@@ -128,7 +121,6 @@ PanelWindow {
                     console.info("Power Option Window hidden: " + power_option_window.hidden);
 
                     console.debug("Power Option Window visible: " + power_option_window.visible);
-                    console.debug("Power Option Frame opacity: " + power_option_frame.opacity);
                 }
             }
         }
@@ -148,5 +140,4 @@ PanelWindow {
                 power_options_list.get(3).is_active = true;
             }
         }
-    }
 }
