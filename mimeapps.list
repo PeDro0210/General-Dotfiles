@@ -1,3 +1,24 @@
-
 [Default Applications]
 x-scheme-handler/discord=vesktop.desktop
+x-scheme-handler/http=userapp-Zen-7JN8I3.desktop
+x-scheme-handler/https=userapp-Zen-7JN8I3.desktop
+x-scheme-handler/chrome=userapp-Zen-7JN8I3.desktop
+text/html=userapp-Zen-7JN8I3.desktop
+application/x-extension-htm=userapp-Zen-7JN8I3.desktop
+application/x-extension-html=userapp-Zen-7JN8I3.desktop
+application/x-extension-shtml=userapp-Zen-7JN8I3.desktop
+application/xhtml+xml=userapp-Zen-7JN8I3.desktop
+application/x-extension-xhtml=userapp-Zen-7JN8I3.desktop
+application/x-extension-xht=userapp-Zen-7JN8I3.desktop
+
+[Added Associations]
+x-scheme-handler/http=userapp-Zen-7JN8I3.desktop;userapp-Zen-YFFVI3.desktop;zen-beta.desktop;firefox.desktop;userapp-Twilight-JVYCJ3.desktop;zen-twilight.desktop;
+x-scheme-handler/https=userapp-Zen-7JN8I3.desktop;userapp-Zen-YFFVI3.desktop;zen-beta.desktop;firefox.desktop;userapp-Twilight-JVYCJ3.desktop;zen-twilight.desktop;
+x-scheme-handler/chrome=userapp-Zen-7JN8I3.desktop;userapp-Zen-YFFVI3.desktop;zen-beta.desktop;firefox.desktop;userapp-Twilight-JVYCJ3.desktop;zen-twilight.desktop;
+text/html=zen-twilight.desktop;userapp-Twilight-JVYCJ3.desktop;firefox.desktop;zen-beta.desktop;userapp-Zen-YFFVI3.desktop;userapp-Zen-7JN8I3.desktop;
+application/x-extension-htm=zen-twilight.desktop;userapp-Twilight-JVYCJ3.desktop;firefox.desktop;zen-beta.desktop;userapp-Zen-YFFVI3.desktop;userapp-Zen-7JN8I3.desktop;
+application/x-extension-html=zen-twilight.desktop;userapp-Twilight-JVYCJ3.desktop;firefox.desktop;zen-beta.desktop;userapp-Zen-YFFVI3.desktop;userapp-Zen-7JN8I3.desktop;
+application/x-extension-shtml=zen-twilight.desktop;userapp-Twilight-JVYCJ3.desktop;firefox.desktop;zen-beta.desktop;userapp-Zen-YFFVI3.desktop;userapp-Zen-7JN8I3.desktop;
+application/xhtml+xml=zen-twilight.desktop;userapp-Twilight-JVYCJ3.desktop;firefox.desktop;zen-beta.desktop;userapp-Zen-YFFVI3.desktop;userapp-Zen-7JN8I3.desktop;
+application/x-extension-xhtml=zen-twilight.desktop;userapp-Twilight-JVYCJ3.desktop;firefox.desktop;zen-beta.desktop;userapp-Zen-YFFVI3.desktop;userapp-Zen-7JN8I3.desktop;
+application/x-extension-xht=zen-twilight.desktop;userapp-Twilight-JVYCJ3.desktop;firefox.desktop;zen-beta.desktop;userapp-Zen-YFFVI3.desktop;userapp-Zen-7JN8I3.desktop;

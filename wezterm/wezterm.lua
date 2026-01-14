@@ -27,4 +27,5 @@ return {
 	window_close_confirmation = "NeverPrompt",
 	default_prog = { "fish" },
 	front_end = "OpenGL",
+	enable_wayland = true,
 }

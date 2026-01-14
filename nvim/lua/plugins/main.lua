@@ -2,6 +2,10 @@ vim.g.lazyvim_check_order = false
 
 return {
 	{
+		-- The only thing that I hate about lazy
+		require("plugins.disable"),
+	},
+	{
 		-- Themes
 		require("plugins.themes.synthwave84"),
 		require("plugins.themes.alpha"),
@@ -17,14 +21,12 @@ return {
 	{
 		require("plugins.general.img_support"),
 		require("plugins.general.treesitter"),
+		require("plugins.general.neo_tree"),
+		require("plugins.general.nvim_notify"),
 	},
 	{
 		require("plugins.debugging.rustaceanvim"),
 		require("plugins.debugging.trouble"),
-	},
-	{
-		-- The only thing that I hate about lazy
-		require("plugins.disable"),
 	},
 	{
 		require("plugins.which_key.general"),
