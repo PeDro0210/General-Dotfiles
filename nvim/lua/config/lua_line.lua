@@ -15,6 +15,7 @@ local config = {
 		lualine_y = { "progress" },
 		-- These will be filled later
 		lualine_x = { "buffers" },
+		lualine_z = {},
 	},
 	inactive_sections = {
 		-- these are to remove the defaults
