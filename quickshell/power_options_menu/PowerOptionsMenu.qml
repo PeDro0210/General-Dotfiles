@@ -42,7 +42,6 @@ PanelWindow {
 
     FfRectangle {
         id: power_option_frame
-
         visible: true
         width: 232
         height: 32
@@ -96,6 +95,7 @@ PanelWindow {
                 }
             }
         }
+
         ListView {
             id: power_option_list
             anchors.fill: parent
