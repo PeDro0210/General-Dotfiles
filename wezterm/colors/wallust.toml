@@ -1,31 +1,31 @@
 
 [colors]
 # The default text color
-foreground = "#F6F6F4"
+foreground = "#FAF9F6"
 # The default background color
-background = "#201F1E"
+background = "#151213"
 
 # Overrides the cell background color when the current cell is occupied by the
 # cursor and the cursor style is set to Block
-cursor_bg = "#A4A3C0"
+cursor_bg = "#E0847E"
 # Overrides the text color when the current cell is occupied by the cursor
-cursor_fg = "#201F1E"
+cursor_fg = "#151213"
 # Specifies the border color of the cursor when the cursor style is set to Block,
 # of the color of the vertical or horizontal bar when the cursor style is set to
 # Bar or Underline.
-cursor_border = "#A4A3C0"
+cursor_border = "#E0847E"
 
 # the foreground color of selected text
-selection_fg = "#F6F6F4"
+selection_fg = "#FAF9F6"
 # the background color of selected text
-selection_bg = "#A4A3C0"
+selection_bg = "#E0847E"
 
 # The color of the scrollbar "thumb"; the portion that represents the current viewport
-scrollbar_thumb = "#A4A3C0"
+scrollbar_thumb = "#E0847E"
 
 # The color of the split lines between panes
-split = "#A4A3C0"
+split = "#E0847E"
 
-ansi = ["#464544", "#231E19", "#51508C", "#A91F1D", "#6F6E68", "#C5837D", "#E6E6E1", "#EAEAE8"]
-brights = ["#A4A4A2", "#231E19", "#51508C", "#A91F1D", "#6F6E68", "#C5837D", "#E6E6E1", "#EAEAE8"]
+ansi = ["#3C3A3B", "#664717", "#C70E06", "#8E6779", "#AC8E69", "#B5B2E3", "#F0EEE6", "#EFEEEA"]
+brights = ["#A7A7A4", "#664717", "#C70E06", "#8E6779", "#AC8E69", "#B5B2E3", "#F0EEE6", "#EFEEEA"]
 

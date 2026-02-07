@@ -31,7 +31,7 @@ window {
 
   //This one is for doing the effects I do with the pink and the skyblue
 
-  background-image: linear-gradient(90deg,#C5837D, #6F6E68);
+  background-image: linear-gradient(90deg,#B5B2E3, #AC8E69);
 
 }
 
