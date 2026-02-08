@@ -1,10 +1,9 @@
 return {
-  { "samharju/synthweave.nvim" },
-
-  {
-    "LazyVim/LazyVim",
-    opts = {
-      colorscheme = "synthweave",
-    },
-  },
+	{ "samharju/synthweave.nvim" },
+	{
+		"LazyVim/LazyVim",
+		opts = {
+			colorscheme = "synthweave",
+		},
+	},
 }

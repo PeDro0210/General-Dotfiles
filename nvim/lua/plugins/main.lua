@@ -9,7 +9,7 @@ return {
 		-- Themes
 		require("plugins.themes.synthwave84"),
 		require("plugins.themes.alpha"),
-		require("plugins.themes.image"),
+		require("plugins.themes.snacks"),
 	},
 	{
 		-- Lsp
@@ -19,7 +19,7 @@ return {
 		require("plugins.db-related.dadbod"),
 	},
 	{
-		require("plugins.general.img_support"),
+		require("plugins.general.fzf"),
 		require("plugins.general.treesitter"),
 		require("plugins.general.neo_tree"),
 		require("plugins.general.nvim_notify"),
@@ -27,9 +27,6 @@ return {
 	{
 		require("plugins.debugging.rustaceanvim"),
 		require("plugins.debugging.trouble"),
-	},
-	{
-		require("plugins.which_key.general"),
 	},
 
 	--General Configs
