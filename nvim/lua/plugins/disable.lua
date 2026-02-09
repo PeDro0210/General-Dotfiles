@@ -1,5 +1,4 @@
 return {
-
 	-- mason won't work on nixos, so yeah :p
 	{ "mason-org/mason-lspconfig.nvim", enabled = false },
 	{ "mason-org/mason.nvim", enabled = false },
@@ -10,4 +9,5 @@ return {
 	{ "folke/persitence.nvim", enabled = false },
 	{ "rcarriga/nvim-notify", enabled = false },
 	{ "akinsho/bufferline.nvim", enabled = false },
+	{ "which-key.nvim", enabled = false },
 }
