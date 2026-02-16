@@ -23,6 +23,7 @@ return {
 		require("plugins.general.treesitter"),
 		require("plugins.general.neo_tree"),
 		require("plugins.general.nvim_notify"),
+		require("plugins.general.conform"),
 	},
 	{
 		require("plugins.debugging.rustaceanvim"),

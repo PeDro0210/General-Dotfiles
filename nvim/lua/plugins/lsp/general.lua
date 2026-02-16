@@ -57,4 +57,15 @@ return {
 			},
 		},
 	},
+
+	-- for make lsp
+	vim.api.nvim_create_autocmd({ "BufEnter" }, {
+		pattern = { "Makefile.am", "Makefile" },
+		callback = function()
+			vim.lsp.start({
+				name = "make",
+				cmd = { "make-language-server" },
+			})
+		end,
+	}),
 }
