@@ -27,3 +27,7 @@ quickshell.target = '~/.config/quickshell/Config.qml'
 
 wl-kbptr.template = 'wl-kbptr-config'
 wl-kbptr.target = '~/.config/wl-kbptr/config'
+
+neopywal.template = 'colors_neopywal.vim'
+neopywal.target = '~/.cache/wal/colors-wal.vim'
+
