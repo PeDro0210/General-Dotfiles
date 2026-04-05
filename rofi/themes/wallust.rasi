@@ -22,8 +22,8 @@ mainbox{
 }
 
 window {
-  location : north;
-  anchor   : north;
+  location : center;
+  anchor   : center;
   width    : 364px;
   height: 375px;
 
@@ -31,7 +31,7 @@ window {
 
   //This one is for doing the effects I do with the pink and the skyblue
 
-  background-image: linear-gradient(90deg,#D3A197, #73B1B2);
+  background-image: linear-gradient(90deg,#A998BA, #C99260);
 
 }
 

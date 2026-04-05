@@ -24,8 +24,9 @@ return {
 		TERMINFO_DIRS = "/home/pedro0210/.nix-profile/share/terminfo",
 		WSLENV = "TERMINFO_DIRS",
 	},
+
 	window_close_confirmation = "NeverPrompt",
-	default_prog = { "fish" },
 	front_end = "OpenGL",
+	default_prog = { "fish" },
 	enable_wayland = true,
 }

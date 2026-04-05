@@ -22,8 +22,8 @@ mainbox{
 }
 
 window {
-  location : north;
-  anchor   : north;
+  location : center;
+  anchor   : center;
   width    : 364px;
   height: 375px;
 
