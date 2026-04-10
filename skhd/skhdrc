@@ -1,0 +1,4 @@
+alt - return : open -n /Applications/Nix\ Apps/WezTerm.app/
+ctrl - b :  /Applications/Nix\ Apps/Glide.app/Contents/MacOS/glide
+alt - e : kitty btop
+alt - q  : aerospace close focused

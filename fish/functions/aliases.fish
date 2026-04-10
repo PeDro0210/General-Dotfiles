@@ -1,0 +1,6 @@
+alias vi="nvim"
+alias vim="nvim"
+alias y="yazi"
+alias ls="eza"
+alias v="nvim"
+alias fastfetch="fastfetch --iterm ~/.config/fastfetch/assets/milk-chan.jpg"

@@ -1,0 +1,15 @@
+backend = "fastresize"
+color_space = "lch"
+palette = "dark"
+
+[templates]
+wezterm.template = 'colors-wezterm.toml'
+wezterm.target = '~/.config/wezterm/colors/wallust.toml'
+
+neopywal.template = 'colors_neopywal.vim'
+neopywal.target = '~/.cache/wal/colors-wal.vim'
+
+sketchybar.template = 'colors_sketchybar.sh'
+sketchybar.target = '~/.config/sketchybar/colors.sh'
+
+
