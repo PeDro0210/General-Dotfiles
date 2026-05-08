@@ -24,3 +24,5 @@ wl-kbptr.target = '~/.config/wl-kbptr/config'
 neopywal.template = 'colors_neopywal.vim'
 neopywal.target = '~/.cache/wal/colors-wal.vim'
 
+kitty.template = 'colors-kitty.conf'
+kitty.target = '~/.config/kitty/themes/kitty-colors.conf'

@@ -55,13 +55,13 @@ PanelWindow {
 
             PropertyChanges {
                 power_option_window {
-                    visible: false
+                    visible: !power_option_window.hidden
                 }
             }
 
             PropertyChanges {
                 power_option_frame {
-                    opacity: 0
+                    visible: !power_option_window.hidden
                 }
             }
         }

@@ -45,6 +45,8 @@ return {
 		cmd = { "qmlls", "-E" },
 	}),
 
+	require("lspconfig").rust_analyzer.setup({}),
+
 	inyect_lsps_args_into_formatter(),
 
 	{
