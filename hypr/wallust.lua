@@ -1,0 +1,7 @@
+Background = "rgb(060402)"
+Foreground = "rgb(D1F8FD)"
+Color0 = "rgb(060402)"
+Color1 = "rgb(7A6835)"
+Color2 = "rgb(64BBDA)"
+Color3 = "rgb(D14390)"
+Color4 = "rgb(A68FBD)"

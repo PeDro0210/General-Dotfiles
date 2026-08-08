@@ -40,6 +40,14 @@ end
 return {
 
 	vim.lsp.enable("lua_ls"), -- cause' lua lsp is like supported out of the box
+	vim.lsp.config("astro", {
+		init_options = {
+			typescript = {
+				sdk = vim.fs.normalize(vim.fn.getcwd() .. "/node_modules/typescript/lib"),
+			},
+		},
+	}),
+	vim.lsp.enable("astro"),
 
 	require("lspconfig").qmlls.setup({
 		cmd = { "qmlls", "-E" },

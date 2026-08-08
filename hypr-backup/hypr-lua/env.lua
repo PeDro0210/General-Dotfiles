@@ -1,0 +1,13 @@
+hl.env("TERMINAL", "wezterm")
+hl.env("QT_QPA_PLATFORMTHEME", "qt5ct")
+hl.env("QT_STYLE_OVERRIDE", "kvantum")
+hl.env("XDG_CURRENT_DESKTOP", "Hyprland")
+hl.env("XDG_SESSION_DESKTOP", "Hyprland")
+hl.env("__NV_PRIME_RENDER_OFFLOAD", 1)
+hl.env("__NV_PRIME_RENDER_OFFLOAD_PROVIDER", "NVIDIA - G0")
+hl.env("__GLX_VENDOR_LIBRARY_NAME", "nvidia")
+hl.env("__VK_LAYER_NV_optimus", "NVIDIA_only")
+hl.env("bitdepth", 10)
+hl.env("GNOME_SCHEMA", "org.gnome.desktop.interface")
+
+hl.exec_cmd("gsettings set $GNOME_SCHEMA font-name 'Pixel Code'")

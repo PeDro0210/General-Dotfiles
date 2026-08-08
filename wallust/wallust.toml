@@ -26,3 +26,6 @@ neopywal.target = '~/.cache/wal/colors-wal.vim'
 
 kitty.template = 'colors-kitty.conf'
 kitty.target = '~/.config/kitty/themes/kitty-colors.conf'
+
+waymac.template = "waymac.toml"
+waymac.target = "~/.config/waymac/waymac.toml"
